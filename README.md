@@ -6,9 +6,9 @@ Built for team collaboration — contributions welcome!
 
 ## Project Goals
 - Document experiments, best practices, and consulting templates.
-- Analyze performance, costs, biases, or use cases with notebooks.
-- Share reusable code, prompts, and datasets (where possible).
-
+- Analyze data, use cases with notebooks.
+- Share reusable code, prompts, and datasets
+- 
 ## Folder Structure
 
 ## Quick Setup

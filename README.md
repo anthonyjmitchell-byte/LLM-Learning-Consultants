@@ -8,7 +8,7 @@ Built for team collaboration — contributions welcome!
 - Document experiments, best practices, and consulting templates.
 - Analyze data, use cases with notebooks.
 - Share reusable code, prompts, and datasets
-- 
+  
 ## Folder Structure
 
 ## Quick Setup

@@ -1,6 +1,6 @@
 # LLM Learning Consultants
 
-AI applications, prompt engineering, fine-tuning, evaluation, and related tools. Focused on practical Python-based experiments, Jupyter Notebooks, and data-driven insights.
+AI applications, prompt engineering, fine-tuning, evaluation, and related tools. Focused on Python usage.
 
 ## Project Goals
 - Document experiments, best practices, and consulting templates.

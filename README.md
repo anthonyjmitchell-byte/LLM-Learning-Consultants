@@ -8,6 +8,25 @@ AI applications, prompt engineering, fine-tuning, evaluation, and related tools.
 - Share reusable code, prompts, and datasets
   
 ## Folder Structure
+LLM-Learning-Consultants/
+├── README.md
+├── requirements.txt
+├── .gitignore
+├── notebooks/                 # Jupyter notebooks for experiments
+│   ├── 01_prompt_engineering.ipynb
+│   └── evaluation/            # Subfolder for metrics/benchmarks
+├── src/                       # Reusable code
+│   ├── init.py
+│   ├── prompts.py             # Prompt templates
+│   └── llm_utils.py           # API calls, evaluation helpers
+├── data/                      # Small sample data/prompts only
+│   ├── raw/                   # Original small files
+│   └── processed/
+├── docs/                      # Guides, notes, glossaries
+│   ├── best-practices.md
+│   └── figures/               # Screenshots, diagrams
+└── .github/                   # Future workflows
+
 
 ## Quick Setup
 1. Clone the repo:

@@ -30,11 +30,11 @@ LLM-Learning-Consultants/
 ## Tech Stack
 
 ### Languages
-- Python 3.10+ (core language for scripts and notebooks)
+- Python 
 
 ### Frameworks & Libraries
 - Jupyter / JupyterLab (interactive notebooks for experiments)
-- Hugging Face Transformers (LLM models, tokenizers, pipelines)
+- Transformers (LLM models, tokenizers, pipelines)
 - OpenAI SDK (or Groq, Anthropic, etc. for API access)
 - Pandas & Openpyxl (data handling, if using Excel/CSV for prompts or evaluations)
 - Matplotlib / Seaborn (visualizations of results)

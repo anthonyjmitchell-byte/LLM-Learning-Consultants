@@ -1,0 +1,10 @@
+jupyterlab>=4.0
+notebook
+pandas>=2.0
+openpyxl           # If any Excel data
+transformers>=4.35  # Hugging Face for LLMs
+openai             # Or anthropic, groq, etc.
+datasets           # Hugging Face datasets
+matplotlib
+seaborn
+python-dotenv      # For API keys in .env

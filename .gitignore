@@ -1,0 +1,27 @@
+# Python / Jupyter
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Data (ignore large files; keep samples only)
+data/*.json
+data/*.csv
+data/*.xlsx
+data/raw/*
+!data/raw/sample_*   # Allow small demo files
+
+# Env / Tools
+.env
+.venv/
+*.egg-info/
+dist/
+build/
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/

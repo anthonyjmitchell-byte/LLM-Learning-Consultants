@@ -56,3 +56,24 @@ LLM-Learning-Consultants/
    ```bash
    git clone https://github.com/anthonyjmitchelll-byte/LLM-Learning-Consultants.git
    cd LLM-Learning-Consultants
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LLM Learning Consultants</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 2rem; }
+    h1 { color: #2c3e50; }
+  </style>
+</head>
+<body>
+  <h1>LLM Learning Consultants</h1>
+  <p>Welcome to my experiments with prompt engineering, local models, and Python tools for LLMs.</p>
+  <p><a href="README.md">View full README →</a></p>
+  <p><a href="notebooks/">Notebooks (open in Jupyter/Colab)</a></p>
+</body>
+</html>

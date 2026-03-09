@@ -3,28 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="LLM Learning Consultants - experiments with prompt engineering and Python tools">
   <title>LLM Learning Consultants</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary: #2c3e50;
-      --accent: #3498db;
-      --light: #ecf0f1;
+      --primary: #1a365d;
+      --accent: #4299e1;
+      --light: #f7fafc;
+      --gray: #4a5568;
     }
     * { box-sizing: border-box; margin:0; padding:0; }
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: 'Inter', system-ui, sans-serif;
       background: var(--light);
-      color: var(--primary);
+      color: var(--gray);
       line-height: 1.6;
     }
-    .container { max-width: 900px; margin: 0 auto; padding: 2rem 1rem; }
-    header { text-align: center; padding: 3rem 0 2rem; background: var(--primary); color: white; }
-    h1 { margin-bottom: 0.5rem; }
-    nav a { margin: 0 1rem; color: var(--accent); text-decoration: none; font-weight: 600; }
-    main { padding: 2rem 0; }
-    footer { text-align: center; padding: 2rem; background: var(--primary); color: white; }
-    @media (max-width: 600px) {
+    .container { max-width: 1000px; margin: 0 auto; padding: 0 1.5rem; }
+    header {
+      background: var(--primary);
+      color: white;
+      padding: 4rem 0 3rem;
+      text-align: center;
+    }
+    h1 { font-size: 2.8rem; margin-bottom: 0.5rem; }
+    header p { font-size: 1.2rem; opacity: 0.9; }
+    nav {
+      background: white;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    nav .container {
+      display: flex;
+      justify-content: center;
+      padding: 1rem 0;
+    }
+    nav a {
+      margin: 0 1.5rem;
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    nav a:hover { color: var(--accent); }
+    main { padding: 3rem 0; }
+    footer {
+      background: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 2rem 0;
+      margin-top: 3rem;
+    }
+    @media (max-width: 640px) {
+      h1 { font-size: 2.2rem; }
       nav a { display: block; margin: 0.8rem 0; }
     }
   </style>
@@ -33,7 +69,7 @@
   <header>
     <div class="container">
       <h1>LLM Learning Consultants</h1>
-      <p>Exploring prompts, local models, and Python for AI</p>
+      <p>Personal experiments in prompt engineering, local models, evaluation, and Python tools for LLMs (2026)</p>
     </div>
   </header>
 
@@ -48,12 +84,12 @@
 
   <main class="container">
     <h2>Welcome</h2>
-    <p>This is the live site for my LLM learning project (March 2026).</p>
-    <p>Check back for notebooks, code, and results.</p>
+    <p>This is the public home for my LLM learning journey.</p>
+    <p>Currently includes notebooks, reusable prompt helpers, and small data experiments.</p>
   </main>
 
   <footer>
-    <p>© 2026 Anthony Mitchell-Byte</p>
+    <p>© 2026 Anthony Mitchell-Byte • Hosted on GitHub Pages</p>
   </footer>
 </body>
 </html>

@@ -3,67 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="LLM Learning Consultants - experiments with prompt engineering and Python tools">
+  <meta name="description" content="LLM Learning Consultants - experiments with prompt engineering, local models, and Python tools">
   <title>LLM Learning Consultants</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --primary: #1a365d;
-      --accent: #4299e1;
-      --light: #f7fafc;
-      --gray: #4a5568;
-    }
-    * { box-sizing: border-box; margin:0; padding:0; }
-    body {
-      font-family: 'Inter', system-ui, sans-serif;
-      background: var(--light);
-      color: var(--gray);
-      line-height: 1.6;
-    }
-    .container { max-width: 1000px; margin: 0 auto; padding: 0 1.5rem; }
-    header {
-      background: var(--primary);
-      color: white;
-      padding: 4rem 0 3rem;
-      text-align: center;
-    }
-    h1 { font-size: 2.8rem; margin-bottom: 0.5rem; }
-    header p { font-size: 1.2rem; opacity: 0.9; }
-    nav {
-      background: white;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-    nav .container {
-      display: flex;
-      justify-content: center;
-      padding: 1rem 0;
-    }
-    nav a {
-      margin: 0 1.5rem;
-      color: var(--primary);
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.2s;
-    }
-    nav a:hover { color: var(--accent); }
-    main { padding: 3rem 0; }
-    footer {
-      background: var(--primary);
-      color: white;
-      text-align: center;
-      padding: 2rem 0;
-      margin-top: 3rem;
-    }
-    @media (max-width: 640px) {
-      h1 { font-size: 2.2rem; }
-      nav a { display: block; margin: 0.8rem 0; }
-    }
-  </style>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header>
@@ -73,23 +18,49 @@
     </div>
   </header>
 
-  <nav>
+  <nav aria-label="Main navigation">
     <div class="container">
-      <a href="#">Home</a>
-      <a href="#">Notebooks</a>
-      <a href="#">Experiments</a>
-      <a href="#">About</a>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="notebooks/">Notebooks</a>
+      <a href="experiments/">Experiments</a>
     </div>
   </nav>
 
   <main class="container">
-    <h2>Welcome</h2>
-    <p>This is the public home for my LLM learning journey.</p>
-    <p>Currently includes notebooks, reusable prompt helpers, and small data experiments.</p>
+    <section>
+      <h2>Welcome</h2>
+      <p>This is the public home for my LLM learning journey.</p>
+      <p>Focus: offline experiments, prompt templates, local inference, data tools.</p>
+    </section>
+
+    <section>
+      <h2>My Notebooks</h2>
+      <ul>
+        <li>
+          <a href="notebooks/01_prompt_engineering.ipynb" target="_blank" rel="noopener noreferrer">
+            Prompt Engineering Basics (direct Jupyter)
+          </a>
+        </li>
+        <li>
+          <a href="https://colab.research.google.com/github/anthonyjmitchell-byte/LLM-Learning-Consultants/blob/main/notebooks/01_prompt_engineering.ipynb" target="_blank" rel="noopener noreferrer">
+            01_prompt_engineering.ipynb in Google Colab
+          </a>
+        </li>
+        <li>
+          <a href="https://nbviewer.org/github/anthonyjmitchell-byte/LLM-Learning-Consultants/blob/main/notebooks/01_prompt_engineering.ipynb" target="_blank" rel="noopener noreferrer">
+            View rendered notebook (nbviewer)
+          </a>
+        </li>
+        <!-- Add more notebooks the same way -->
+      </ul>
+    </section>
   </main>
 
   <footer>
-    <p>© 2026 Anthony Mitchell-Byte • Hosted on GitHub Pages</p>
+    <div class="container">
+      <p>© 2026 Anthony Mitchell-Byte • Hosted on <a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer">GitHub Pages</a></p>
+    </div>
   </footer>
 </body>
 </html>

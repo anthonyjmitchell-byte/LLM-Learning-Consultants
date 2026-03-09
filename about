@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="About LLM Learning Consultants project">
+  <title>About - LLM Learning Consultants</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>About LLM Learning Consultants</h1>
+    </div>
+  </header>
+
+  <nav aria-label="Main navigation">
+    <div class="container">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="notebooks/">Notebooks</a>
+      <a href="experiments/">Experiments</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <h2>Project Overview</h2>
+    <p>This is a personal learning repo focused on:</p>
+    <ul>
+      <li>Prompt engineering techniques</li>
+      <li>Local/offline LLM inference</li>
+      <li>Evaluation metrics and benchmarks</li>
+      <li>Reusable Python tools and notebooks</li>
+    </ul>
+
+    <h2>Current Status (March 2026)</h2>
+    <p>Setup includes Jupyter notebooks, prompt helpers in src/, and basic data experiments.</p>
+
+    <h2>Contact / Feedback</h2>
+    <p>Feel free to open an issue on the repo if you have suggestions.</p>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 Anthony Mitchell-Byte • Hosted on GitHub Pages</p>
+    </div>
+  </footer>
+</body>
+</html>

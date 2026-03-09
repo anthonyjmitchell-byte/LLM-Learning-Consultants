@@ -4,37 +4,56 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LLM Learning Consultants</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --primary: #2c3e50;
+      --accent: #3498db;
+      --light: #ecf0f1;
+    }
+    * { box-sizing: border-box; margin:0; padding:0; }
     body {
-      font-family: Arial, sans-serif;
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 2rem;
+      font-family: 'Inter', sans-serif;
+      background: var(--light);
+      color: var(--primary);
       line-height: 1.6;
     }
-    h1 { color: #2c3e50; }
-    p { margin: 1rem 0; }
-    a { color: #2980b9; }
+    .container { max-width: 900px; margin: 0 auto; padding: 2rem 1rem; }
+    header { text-align: center; padding: 3rem 0 2rem; background: var(--primary); color: white; }
+    h1 { margin-bottom: 0.5rem; }
+    nav a { margin: 0 1rem; color: var(--accent); text-decoration: none; font-weight: 600; }
+    main { padding: 2rem 0; }
+    footer { text-align: center; padding: 2rem; background: var(--primary); color: white; }
+    @media (max-width: 600px) {
+      nav a { display: block; margin: 0.8rem 0; }
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1>LLM Learning Consultants</h1>
-    <p>Personal experiments with prompt engineering, local models, evaluation, and Python tools for LLMs.</p>
+    <div class="container">
+      <h1>LLM Learning Consultants</h1>
+      <p>Exploring prompts, local models, and Python for AI</p>
+    </div>
   </header>
 
-  <main>
+  <nav>
+    <div class="container">
+      <a href="#">Home</a>
+      <a href="#">Notebooks</a>
+      <a href="#">Experiments</a>
+      <a href="#">About</a>
+    </div>
+  </nav>
+
+  <main class="container">
     <h2>Welcome</h2>
-    <p>This is my public learning space (March 2026).</p>
-    <ul>
-      <li><a href="README.md">Read full README →</a></li>
-      <li><a href="notebooks/">View notebooks</a> (open in Jupyter/Colab)</li>
-      <li><a href="src/">Source code helpers</a></li>
-    </ul>
+    <p>This is the live site for my LLM learning project (March 2026).</p>
+    <p>Check back for notebooks, code, and results.</p>
   </main>
 
   <footer>
-    <p>&copy; 2026 Anthony Mitchell-Byte</p>
+    <p>© 2026 Anthony Mitchell-Byte</p>
   </footer>
 </body>
 </html>

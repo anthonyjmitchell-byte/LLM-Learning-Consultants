@@ -1,0 +1,30 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+.resource-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1.5rem;
+  background: #fafafa;
+  transition: transform 0.1s;
+}
+.resource-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+.type { color: #666; font-size: 0.95rem; margin: 0.5rem 0; }
+.tags span {
+  background: #e0f7fa;
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  margin-right: 0.4rem;
+}
+.links a {
+  color: #0066cc;
+  text-decoration: none;
+}
+.links a:hover { text-decoration: underline; }

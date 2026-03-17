@@ -1,0 +1,25 @@
+[
+  {
+    "title": "Prompt Engineering Basics",
+    "type": "Notebook",
+    "description": "Core techniques: few-shot, chain-of-thought, role prompting, delimiters.",
+    "date": "2026-03",
+    "tags": ["prompting", "basics"],
+    "links": {
+      "notebook": "notebooks/01_prompt_engineering.ipynb",
+      "colab": "https://colab.research.google.com/github/anthonyjmitchell-byte/LLM-Learning-Consultants/blob/main/notebooks/01_prompt_engineering.ipynb",
+      "rendered": "https://nbviewer.org/github/anthonyjmitchell-byte/LLM-Learning-Consultants/blob/main/notebooks/01_prompt_engineering.ipynb"
+    },
+    "status": "active"
+  },
+  {
+    "title": "Local Llama-3.1 8B Evaluation",
+    "type": "Experiment",
+    "description": "Benchmarking quantized local inference vs API calls on reasoning tasks.",
+    "date": "2026-04 (planned)",
+    "tags": ["local-models", "evaluation"],
+    "links": {},
+    "status": "planned"
+  }
+  // ← add more objects here later
+]

@@ -10,6 +10,38 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
+<section id="resources">
+  <h2>LLM Resources & Experiments</h2>
+  <div id="resource-list" class="grid"></div>
+</section>
+
+<script>
+  fetch('data/llm-resources.json')
+    .then(res => res.json())
+    .then(resources => {
+      const container = document.getElementById('resource-list');
+      resources.forEach(r => {
+        const card = document.createElement('div');
+        card.className = 'resource-card';
+        card.innerHTML = `
+          <h3>${r.title}</h3>
+          <p class="type">${r.type} • ${r.date}</p>
+          <p>${r.description}</p>
+          $$   {r.tags ? `<p class="tags">${r.tags.map(t => `<span>#   $${t}</span>`).join(' ')}</p>` : ''}
+          <div class="links">
+            ${Object.entries(r.links).map(([key, url]) => 
+              url ? `<a href="${url}" target="_blank">${key}</a>` : ''
+            ).join(' • ')}
+          </div>
+        `;
+        container.appendChild(card);
+      });
+    })
+    .catch(err => {
+      console.error(err);
+      document.getElementById('resource-list').innerHTML = '<p>Error loading resources.</p>';
+    });
+</script>
 <body> 
   <header>
     <div class="container">

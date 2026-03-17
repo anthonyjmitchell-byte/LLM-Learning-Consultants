@@ -1,99 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="LLM Learning Consultants - experiments with prompt engineering, local models, and Python tools">
-  <title>LLM Learning Consultants</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <header>
-    <div class="container">
-      <h1>LLM Learning Consultants</h1>
-      <p>Personal experiments in prompt engineering, local models, evaluation, and Python tools for LLMs (2026)</p>
-    </div>
-  </header>
+<section id="resources">
+  <h2>LLM Resources & Experiments</h2>
+  <div id="resource-list" class="grid"></div>
+</section>
 
-  <nav aria-label="Main navigation">
-    <div class="container">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="notebooks/">Notebooks</a>
-      <a href="experiments/">Experiments</a>
-    </div>
-  </nav>
-
-  <main class="container">
-    <section>
-      <h2>Welcome</h2>
-      <p>This is the public home for my LLM learning journey.</p>
-      <p>Focus: offline experiments, prompt templates, local inference, data tools.</p>
-    </section>
-
-    <section>
-      <h2>My Notebooks</h2>
-      <ul>
-        <li>
-          <a href="notebooks/01_prompt_engineering.ipynb" target="_blank" rel="noopener noreferrer">
-            Prompt Engineering Basics (direct Jupyter)
-          </a>
-        </li>
-        <li>
-          <a href="https://colab.research.google.com/github/anthonyjmitchell-byte/LLM-Learning-Consultants/blob/main/notebooks/01_prompt_engineering.ipynb" target="_blank" rel="noopener noreferrer">
-            01_prompt_engineering.ipynb in Google Colab
-          </a>
-        </li>
-        <li>
-          <a href="https://nbviewer.org/github/anthonyjmitchell-byte/LLM-Learning-Consultants/blob/main/notebooks/01_prompt_engineering.ipynb" target="_blank" rel="noopener noreferrer">
-            View rendered notebook (nbviewer)
-          </a>
-        </li>
-      </ul>
-    </section>
-
-    <section id="resources">
-      <h2>LLM Resources & Experiments</h2>
-      <div id="resource-list" class="grid"></div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container">
-      <p>© 2026 Anthony Mitchell-Byte • Hosted on <a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer">GitHub Pages</a></p>
-    </div>
-  </footer>
-
-  <script>
-    fetch('data/llm-resources.json')
-      .then(res => res.json())
-      .then(resources => {
-        const container = document.getElementById('resource-list');
-        resources.forEach(r => {
-          const card = document.createElement('div');
-          card.className = 'resource-card';
-          card.innerHTML = `
-            <h3>${r.title}</h3>
-            <p class="meta">${r.type || 'Resource'} • ${r.date}</p>
-            <p>${r.description}</p>
-            ${r.tags ? `<p class="tags">${r.tags.map(t => `<span>#${t}</span>`).join(' ')}</p>` : ''}
-            <div class="links">
-              ${Object.entries(r.links || {}).map(([key, url]) =>
-                url ? `<a href="${url}" target="_blank" rel="noopener">${key}</a>` : ''
-              ).join(' • ')}
-            </div>
-          `;
-          container.appendChild(card);
-        });
-      })
-      .catch(err => {
-        console.error('Failed to load resources:', err);
-        document.getElementById('resource-list').innerHTML = 
-          '<p style="color:#c00;">Error loading data — check console.</p>';
+<script>
+  fetch('data/llm-resources.json')
+    .then(res => {
+      if (!res.ok) {
+        throw new Error('Network response was not ok: ' + res.status);
+      }
+      return res.json();
+    })
+    .then(resources => {
+      const container = document.getElementById('resource-list');
+      if (!container) {
+        console.error('Container #resource-list not found in DOM');
+        return;
+      }
+      container.innerHTML = ''; // Clear loading/error placeholder if any
+      resources.forEach(r => {
+        const card = document.createElement('div');
+        card.className = 'resource-card';
+        card.innerHTML = `
+          <h3>${r.title}</h3>
+          <p class="meta">${r.type || 'Resource'} • ${r.date}</p>
+          <p>${r.description}</p>
+          ${r.tags && r.tags.length ? 
+            `<p class="tags">${r.tags.map(t => `<span>#${t}</span>`).join(' ')}</p>` : ''}
+          <div class="links">
+            ${Object.entries(r.links || {}).map(([key, url]) => 
+              url ? `<a href="${url}" target="_blank" rel="noopener">${key}</a>` : ''
+            ).join(' • ')}
+          </div>
+        `;
+        container.appendChild(card);
       });
-  </script>
-</body>
-</html>
+    })
+    .catch(err => {
+      console.error('Failed to load resources:', err);
+      const container = document.getElementById('resource-list');
+      if (container) {
+        container.innerHTML = '<p style="color:#c00; text-align:center;">Error loading data — check browser console for details.</p>';
+      }
+    });
+</script>

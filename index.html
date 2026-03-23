@@ -1,46 +1,37 @@
-<section id="resources">
-  <h2>LLM Resources & Experiments</h2>
-  <div id="resource-list" class="grid"></div>
-</section>
+# LLM Impact on Computer Science Learning @ Lewis University
 
-<script>
-  fetch('data/llm-resources.json')
-    .then(res => {
-      if (!res.ok) {
-        throw new Error('Network response was not ok: ' + res.status);
-      }
-      return res.json();
-    })
-    .then(resources => {
-      const container = document.getElementById('resource-list');
-      if (!container) {
-        console.error('Container #resource-list not found in DOM');
-        return;
-      }
-      container.innerHTML = ''; // Clear loading/error placeholder if any
-      resources.forEach(r => {
-        const card = document.createElement('div');
-        card.className = 'resource-card';
-        card.innerHTML = `
-          <h3>${r.title}</h3>
-          <p class="meta">${r.type || 'Resource'} • ${r.date}</p>
-          <p>${r.description}</p>
-          ${r.tags && r.tags.length ? 
-            `<p class="tags">${r.tags.map(t => `<span>#${t}</span>`).join(' ')}</p>` : ''}
-          <div class="links">
-            ${Object.entries(r.links || {}).map(([key, url]) => 
-              url ? `<a href="${url}" target="_blank" rel="noopener">${key}</a>` : ''
-            ).join(' • ')}
-          </div>
-        `;
-        container.appendChild(card);
-      });
-    })
-    .catch(err => {
-      console.error('Failed to load resources:', err);
-      const container = document.getElementById('resource-list');
-      if (container) {
-        container.innerHTML = '<p style="color:#c00; text-align:center;">Error loading data — check browser console for details.</p>';
-      }
-    });
-</script>
+**Capstone study (2025–2026)** – Student AI usage patterns, learning outcomes, professor-facing analytics.
+
+[Anthony J. Mitchell](https://github.com/anthonyjmitchell-byte) – CS student investigating AI in education.
+
+## Summary (from Value & Importance)
+This project provides professors with real, anonymous data on LLM usage in the Lewis University CS department...
+
+<details>
+<summary>1. Background & Problem (click to expand)</summary>
+
+ChatGPT and LLMs affect how students learn... [paste condensed text, quotes, stats like "teen usage up to 54% in 2025-2026 Pew data"]
+
+</details>
+
+<details>
+<summary>2. Methodology</summary>
+- Surveys via Microsoft Forms
+- Interviews (Zoom/email)
+- Participants: 16 undergrad/grad + 24 alumni
+- Question types: Likert, multiple choice, open-ended
+...
+</details>
+
+<!-- Add more chapters as details blocks -->
+
+## Tech Stack
+| Library       | Purpose                     |
+|---------------|-----------------------------|
+| Pandas        | Data manipulation           |
+| Matplotlib    | Visualizations              |
+| ...           | ...                         |
+
+## Visualizations (placeholders until you add images)
+<image-card alt="Usage Frequency" src="assets/usage_bar.png" ></image-card>  
+*Caption: Higher reliance among undergrads (n=40 total).*

@@ -1,29 +1,95 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>LLM Impact – Methodology</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    body { font-family: Arial, sans-serif; max-width: 900px; margin: auto; padding: 20px; }
-    nav { margin-bottom: 30px; }
-    nav a { margin-right: 15px; text-decoration: none; }
-  </style>
-</head>
-<body>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="methodology.html">Methodology</a>
-    <a href="findings.html">Findings</a>
-    <a href="application.html">Application</a>
-  </nav>
+/* style.css - Simple professional look for academic AI/LLM research page */
 
-  <h1>Methodology</h1>
-  <p>Surveys via Microsoft Forms... [paste content]</p>
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  color: #212529;
+  background-color: #f8f9fa;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
 
-  <!-- Embed images -->
-  <img src="assets/survey_example.png" alt="Survey question example" width="600">
+h1, h2, h3 {
+  color: #0d6efd;          /* Deep blue for headings */
+  border-bottom: 2px solid #0d6efd;
+  padding-bottom: 8px;
+  margin-top: 2em;
+}
 
-  <!-- Link to notebook -->
-  <p><a href="https://nbviewer.org/github/anthonyjmitchell-byte/LLM-Learning-Consultants/blob/main/notebooks/analysis.ipynb">View Analysis Notebook</a></p>
-</body>
-</html>
+h1 {
+  text-align: center;
+  font-size: 2.5em;
+}
+
+a {
+  color: #0d6efd;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #0a58ca;
+}
+
+button, .btn {
+  background-color: #198754;   /* Soft green accent */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.1em;
+  margin: 10px 5px;
+}
+
+button:hover, .btn:hover {
+  background-color: #157347;
+}
+
+details {
+  background-color: #ffffff;
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  padding: 10px;
+  margin: 15px 0;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: bold;
+  color: #0d6efd;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+th, td {
+  border: 1px solid #dee2e6;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #e9f5ff;   /* Light blue-gray for headers */
+  color: #0d6efd;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin: 15px 0;
+}
+
+footer {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px;
+  color: #6c757d;
+  border-top: 1px solid #dee2e6;
+}

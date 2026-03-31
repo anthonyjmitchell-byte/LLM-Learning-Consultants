@@ -3,9 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Results & Findings - LLM Impact on CS Learning</title>
-  <link rel="stylesheet" href="style.css">
-  
+  <title>Results & Analysis - LLM Impact on CS Learning</title>
   <style>
     body {
       font-family: Arial, Helvetica, sans-serif;
@@ -14,91 +12,74 @@
       background-color: #f8f9fa;
       max-width: 1000px;
       margin: 0 auto;
-      padding: 20px;
+      padding: 30px 20px;
     }
-    h1, h2, h3 {
-      color: #0d6efd;
-    }
+    h1, h2, h3 { color: #0d6efd; }
     img {
       max-width: 100%;
       height: auto;
       border: 1px solid #ddd;
       border-radius: 8px;
-      margin: 20px 0;
+      margin: 20px 0 10px 0;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
     .insight {
       background: #e9f5ff;
-      padding: 15px 20px;
-      border-left: 5px solid #0d6efd;
+      padding: 18px 22px;
+      border-left: 6px solid #0d6efd;
       border-radius: 6px;
       margin: 25px 0;
     }
-    .nav-button {
+    .back-button {
       background: #198754;
       color: white;
-      padding: 10px 20px;
+      padding: 12px 24px;
       border-radius: 6px;
       text-decoration: none;
-      margin: 0 10px;
       display: inline-block;
+      margin-bottom: 30px;
     }
   </style>
 </head>
 <body>
 
-  <h1>Results & Findings</h1>
-  <p style="font-size:1.2em; color:#495057;">
-    Detailed analysis and visualizations from the survey on LLM impact on Computer Science learning at Lewis University.
-  </p>
+  <h1>Results & Analysis</h1>
+  <p style="font-size:1.1em; color:#495057;">Capstone Project 2025–2026 | Lewis University</p>
 
-  <a href="index.html" class="nav-button">← Back to Main Page</a>
+  <a href="index.html" class="back-button">← Back to Home</a>
 
-  <hr style="margin:40px 0;">
+  <h2>Composite Scores Overview</h2>
+  <p>Histograms of Composite Scores (Dependency, Learning, Behavior, Benefit, Usage, Risk)</p>
 
-  <!-- ====================== FINDINGS SECTION ====================== -->
-  <h2>Key Findings</h2>
-
-  <h3>Finding 1: Distribution of Composite Scores</h3>
-  <p>The following charts show how student responses are distributed across the six composite scores.</p>
-
+  <!-- Main Graphs -->
   <img src="docs/figures/composite_scores_histograms.png" 
-       alt="Histograms of composite scores: Dependency, Learning Impact, Behavior, Benefits, Usage, and Risks">
+       alt="Histograms of Composite Scores">
 
   <img src="docs/figures/composite_scores_boxplot_improved.png" 
-       alt="Boxplot comparison of all composite scores">
+       alt="Boxplot of Composite Scores">
 
   <div class="insight">
-    <strong>Key Insight:</strong> 
-    Usage frequency tends to be the highest scoring area, while perceived risks remain relatively low. 
-    Most students fall in the moderate range across dependency and learning impact.
+    <strong>Key Findings:</strong>
+    <ul>
+      <li><strong>High Usage:</strong> Students heavily use LLMs (Usage_Student mean ~ 2.1 / 3.0)</li>
+      <li><strong>Moderate Learning Gains:</strong> Learning_Student mean ~ 1.7 / 3.25</li>
+      <li><strong>Perceived Benefits:</strong> Relatively high (Benefit_Student mean ~ 1.25 / 1.75)</li>
+      <li><strong>Risk Level:</strong> Moderately high (Risk_Student mean ~ 2.5 / 3.0)</li>
+      <li><strong>Problematic behavior:</strong> Remains relatively low on average (Behavior_Student mean ~ 0.45 / 1.0)</li>
+    </ul>
   </div>
 
-  <!-- You can add more findings here easily -->
-  
-  <h3>Finding 2: Individual Score Distributions</h3>
-  <p>Click on each histogram below for a closer look at individual composite scores.</p>
+  <h3>Individual Score Distributions</h3>
 
-  <!-- Add your individual histograms here -->
-  <img src="docs/figures/dependency_student_histogram.png" 
-       alt="Distribution of LLM Dependency Score">
+  <img src="docs/figures/usage_student_histogram.png" alt="Usage Student Score">
+  <img src="docs/figures/dependency_student_histogram.png" alt="Dependency Student Score">
+  <img src="docs/figures/learning_student_histogram.png" alt="Learning Student Score">
+  <img src="docs/figures/benefit_student_histogram.png" alt="Benefit Student Score">
+  <img src="docs/figures/risk_student_histogram.png" alt="Risk Student Score">
+  <img src="docs/figures/behavior_student_histogram.png" alt="Behavior Student Score">
 
-  <img src="docs/figures/usage_student_histogram.png" 
-       alt="Distribution of LLM Usage Frequency Score">
-
-  <!-- Add more individual graphs as needed -->
-
-  <hr style="margin:50px 0;">
-
-  <h2>Summary of Results</h2>
-  <p>Add any overall conclusions or statistical highlights here (e.g., mean scores, notable patterns, etc.).</p>
-
-  <footer style="text-align:center; margin-top:60px; padding:30px; color:#6c757d; border-top:1px solid #dee2e6;">
+  <footer style="text-align:center; margin-top:80px; color:#6c757d;">
     <p>Capstone Project 2025–2026 • Lewis University</p>
-    <p>
-      <a href="https://github.com/anthonyjmitchell-byte/LLM-Learning-Consultants" target="_blank">GitHub Repository</a> • 
-      <a href="index.html">Back to Home</a>
-    </p>
   </footer>
 
 </body>

@@ -4,11 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LLM Impact on CS students and alumni Learning at Lewis University</title>
- 
-  <!-- Link to your shared stylesheet (if you created style.css earlier) -->
   <link rel="stylesheet" href="style.css">
- 
-  <!-- Optional: fallback inline styles if you don't have style.css yet -->
+  
   <style>
     body {
       font-family: Arial, Helvetica, sans-serif;
@@ -32,12 +29,21 @@
     .nav-button:hover {
       background: #146c43;
     }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      margin: 15px 0;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
   </style>
 </head>
 <body>
-  <!-- === Hero Accent Section === -->
+
+  <!-- Hero Section -->
   <div style="background:#e9f5ff; padding:30px; border-radius:12px; margin:0 0 40px 0; text-align:center; box-shadow:0 4px 12px rgba(0,0,0,0.08);">
-    <h1 style="margin:0; font-size:2.8em; color:#0d6efd;"> AI Impact on Computer Science Learning at Lewis University</h1>
+    <h1 style="margin:0; font-size:2.8em; color:#0d6efd;">AI Impact on Computer Science Learning at Lewis University</h1>
     <p style="font-size:1.4em; color:#495057; margin:12px 0 0 0;">
       Student AI usage patterns and learning outcomes
     </p>
@@ -46,7 +52,7 @@
     </p>
   </div>
 
-  <!-- Quick navigation buttons -->
+  <!-- Navigation -->
   <div style="text-align:center; margin:30px 0 50px 0;">
     <a href="#methodology" class="nav-button">Methodology</a>
     <a href="results.html" class="nav-button">Results & Graphs</a>
@@ -54,20 +60,37 @@
     <a href="#application" class="nav-button">Application</a>
   </div>
 
-  <!-- Example content sections -->
+  <!-- Methodology -->
   <h2 id="methodology" style="color:#0d6efd;">Methodology</h2>
   <p>Surveys via Microsoft Forms, interviews, participants: undergrad/grad/alumni...</p>
-  
+ 
   <details>
     <summary>Background & Problem (expand for details)</summary>
     <p>Your detailed background text here...</p>
   </details>
 
-  <!-- Add more sections here later -->
+  <!-- ====================== FINDINGS SECTION ====================== -->
+  <h2 id="findings" style="color:#0d6efd; margin-top:60px;">Findings</h2>
+  <p>Key insights from the survey data on how Large Language Models (LLMs) are impacting Computer Science students and alumni at Lewis University.</p>
+
+  <h3>Finding 1: Distribution of Composite Scores</h3>
+  <p>The charts below show the distribution and comparison of six composite scores derived from student responses.</p>
+
+  <img src="docs/figures/composite_scores_histograms.png" 
+       alt="Histograms showing distribution of LLM Dependency, Learning Impact, Behavior Change, Benefits, Usage Frequency, and Risks">
+
+  <img src="docs/figures/composite_scores_boxplot_improved.png" 
+       alt="Boxplot comparison of all composite scores">
+
+  <p><strong>Key Insight:</strong> Replace this text with your actual interpretation. For example: "Usage frequency scored the highest on average, while perceived risks remained relatively low among participants."</p>
+
+  <!-- You can add more findings here later -->
+  <hr style="margin:40px 0;">
 
   <footer style="text-align:center; margin-top:60px; padding:20px; color:#6c757d; border-top:1px solid #dee2e6;">
     <p>Capstone Project 2025–2026 • Lewis University</p>
     <p><a href="https://github.com/anthonyjmitchell-byte/LLM-Learning-Consultants" target="_blank">View Raw Data on GitHub</a></p>
   </footer>
+
 </body>
 </html>

@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Results & Graphs - LLM Impact on CS Learning</title>
-  
+  <title>Results & Findings - LLM Impact on CS Learning</title>
   <link rel="stylesheet" href="style.css">
   
   <style>
@@ -23,79 +22,82 @@
     img {
       max-width: 100%;
       height: auto;
-      margin: 25px 0;
-      border: 1px solid #dee2e6;
+      border: 1px solid #ddd;
       border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      margin: 20px 0;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
-    .key-findings {
-      background: white;
-      padding: 25px;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      margin: 30px 0;
+    .insight {
+      background: #e9f5ff;
+      padding: 15px 20px;
+      border-left: 5px solid #0d6efd;
+      border-radius: 6px;
+      margin: 25px 0;
     }
     .nav-button {
       background: #198754;
       color: white;
-      padding: 12px 24px;
+      padding: 10px 20px;
       border-radius: 6px;
       text-decoration: none;
-      margin: 0 8px;
+      margin: 0 10px;
       display: inline-block;
-    }
-    .nav-button:hover {
-      background: #146c43;
     }
   </style>
 </head>
 <body>
 
-  <h1>Results & Analysis</h1>
-  <p><strong>Capstone Project 2025–2026 | Lewis University</strong></p>
+  <h1>Results & Findings</h1>
+  <p style="font-size:1.2em; color:#495057;">
+    Detailed analysis and visualizations from the survey on LLM impact on Computer Science learning at Lewis University.
+  </p>
 
-  <div style="text-align:center; margin:30px 0;">
-    <a href="index.html" class="nav-button">← Back to Home</a>
+  <a href="index.html" class="nav-button">← Back to Main Page</a>
+
+  <hr style="margin:40px 0;">
+
+  <!-- ====================== FINDINGS SECTION ====================== -->
+  <h2>Key Findings</h2>
+
+  <h3>Finding 1: Distribution of Composite Scores</h3>
+  <p>The following charts show how student responses are distributed across the six composite scores.</p>
+
+  <img src="docs/figures/composite_scores_histograms.png" 
+       alt="Histograms of composite scores: Dependency, Learning Impact, Behavior, Benefits, Usage, and Risks">
+
+  <img src="docs/figures/composite_scores_boxplot_improved.png" 
+       alt="Boxplot comparison of all composite scores">
+
+  <div class="insight">
+    <strong>Key Insight:</strong> 
+    Usage frequency tends to be the highest scoring area, while perceived risks remain relatively low. 
+    Most students fall in the moderate range across dependency and learning impact.
   </div>
 
-  <h2>Composite Scores Overview</h2>
-  <img src="images/composite_histograms.png" 
-       alt="Histograms of Composite Scores (Dependency, Learning, Behavior, Benefit, Usage, Risk)">
+  <!-- You can add more findings here easily -->
+  
+  <h3>Finding 2: Individual Score Distributions</h3>
+  <p>Click on each histogram below for a closer look at individual composite scores.</p>
 
-  <div class="key-findings">
-    <h2>Key Findings</h2>
-    <ul>
-      <li><strong>High Usage:</strong> Students heavily use LLMs (Usage_Student mean ~ 2.1 / 3.0)</li>
-      <li><strong>Moderate Learning Gains:</strong> Learning_Student mean ~ 1.7 / 3.25</li>
-      <li><strong>Perceived Benefits:</strong> Relatively high (Benefit_Student mean ~ 1.25 / 1.75)</li>
-      <li><strong>Risk Level:</strong> Moderately high (Risk_Student mean ~ 2.5 / 3.0)</li>
-      <li>Problematic behavior remains relatively low on average (Behavior_Student mean ~ 0.45 / 1.0)</li>
-    </ul>
-  </div>
+  <!-- Add your individual histograms here -->
+  <img src="docs/figures/dependency_student_histogram.png" 
+       alt="Distribution of LLM Dependency Score">
 
-  <h2>Distribution of Composite Scores</h2>
-  <img src="images/composite_boxplot.png" 
-       alt="Boxplot showing distribution of all composite scores">
+  <img src="docs/figures/usage_student_histogram.png" 
+       alt="Distribution of LLM Usage Frequency Score">
 
-  <h2>Conclusions</h2>
-  <p>CS students at Lewis University demonstrate <strong>high usage</strong> and <strong>strong perceived benefits</strong> from Large Language Models. 
-  However, the actual <strong>learning gains</strong> appear more moderate in comparison to usage levels.</p>
+  <!-- Add more individual graphs as needed -->
 
-  <p>This pattern suggests that many students are currently using LLMs more for <strong>productivity and task completion</strong> 
-  rather than for deep conceptual understanding and long-term learning.</p>
+  <hr style="margin:50px 0;">
 
-  <h3>Recommendations</h3>
-  <p><strong>For Faculty:</strong> Develop clear guidelines and best practices for responsible LLM usage in Computer Science courses. 
-  Consider integrating LLM literacy into the curriculum to help students convert high usage into stronger learning outcomes while managing potential academic risks.</p>
+  <h2>Summary of Results</h2>
+  <p>Add any overall conclusions or statistical highlights here (e.g., mean scores, notable patterns, etc.).</p>
 
-  <div style="text-align:center; margin:50px 0;">
-    <a href="index.html" class="nav-button">← Back to Home</a>
-  </div>
-
-  <footer style="text-align:center; margin-top:60px; padding:20px; color:#6c757d; border-top:1px solid #dee2e6;">
+  <footer style="text-align:center; margin-top:60px; padding:30px; color:#6c757d; border-top:1px solid #dee2e6;">
     <p>Capstone Project 2025–2026 • Lewis University</p>
     <p>
-      <a href="https://github.com/anthonyjmitchell-byte/LLM-Learning-Consultants" target="_blank">View Raw Survey Data on GitHub</a>
+      <a href="https://github.com/anthonyjmitchell-byte/LLM-Learning-Consultants" target="_blank">GitHub Repository</a> • 
+      <a href="index.html">Back to Home</a>
     </p>
   </footer>
 

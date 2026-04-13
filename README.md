@@ -1,3 +1,6 @@
+## Survey Results
+
+Detailed analysis and visualizations of the student and alumni survey data can be found in **[results.html](results.html)**.
 # LLM Learning Consultants
 
 AI applications, prompt engineering, fine-tuning, evaluation, and related tools. Focused on Python usage.

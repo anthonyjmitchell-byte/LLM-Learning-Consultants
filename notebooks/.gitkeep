@@ -1,1 +1,4 @@
-
+# After creating fig_s, fig_a, and fig_comp
+fig_s.write_image("Figures/students_radar.png", scale=2)
+fig_a.write_image("Figures/alumni_radar.png", scale=2)
+fig_comp.write_image("Figures/students_vs_alumni_bar.png", scale=2)

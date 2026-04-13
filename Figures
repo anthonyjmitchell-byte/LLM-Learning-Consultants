@@ -1,1 +1,13 @@
 
+import plotly.graph_objects as go
+import plotly.express as px
+import pandas as pd
+
+# ... (your existing code to load data, calculate scores, create fig_s, fig_a, fig_comp) ...
+
+# === SAVE THE THREE NEW IMAGES TO THE ROOT Figures/ FOLDER ===
+fig_s.write_image("Figures/students_radar.png", scale=2)           # Higher scale = sharper image
+fig_a.write_image("Figures/alumni_radar.png", scale=2)
+fig_comp.write_image("Figures/students_vs_alumni_bar.png", scale=2)
+
+print("✅ Images successfully saved to the root Figures/ folder!")

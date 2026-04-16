@@ -1,27 +1,17 @@
+# LLM Impact on CS Learning
+
+**Capstone Project 2025–2026 | Lewis University**
+
+This research explores how undergraduate and graduate students in Computer Science at Lewis University use Large Language Models (LLMs) and their effects on learning, dependency, problem-solving, retention, and academic integrity.
+
+**Live Research Results:** [View Full Results & Analysis](results.html) — includes all graphs, interpretations, radar charts, comparison bars, and complete methodology/documentation.
+
+---
+
+## Project Goals
+- Analyze real survey data from Lewis University CS students and alumni
+- Quantify LLM usage, dependency, perceived learning impact, benefits, risks, and behaviors
+- Provide visualizations and insights for educators and students
+- Document methodology, assumptions, and reproducible analysis pipeline
+
 ## Folder Structure
-LLM-Learning-Consultants/
-├── README.md
-├── requirements.txt
-├── .gitignore
-├── .nojekyll
-├── index.html
-├── results.html
-├── survey.html
-├── data/                  # Survey data (raw + processed)
-├── src/                   # Python analysis scripts
-├── docs/
-│   └── figures/           # All charts used on the website (standardized path)
-├── notebooks/             # Jupyter notebooks for experiments
-├── Figures/               # Optional older folder for radar/bar charts
-└── css/                   # Stylesheets (if any)
-
-All graphs on the **results.html** page now use the standardized `docs/figures/` path for consistency.
-
-## How to Update Results
-
-To keep the survey analysis and visualizations current when new responses are collected:
-
-1. Add new survey data to `data/survey_responses.csv` (or the Excel file `Impact of Large Language Models .xlsx`).
-2. Run the analysis script:
-   ```bash
-   python src/analyze_survey.py

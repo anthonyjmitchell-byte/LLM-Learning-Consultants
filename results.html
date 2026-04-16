@@ -62,13 +62,11 @@
   <h2>Composite Scores Overview</h2>
   <p>Histograms and boxplots showing the distribution of composite scores across six key dimensions for current Computer Science students.</p>
 
-  <img src="docs/figures/composite_scores_histograms.png"
-       alt="Histograms of Composite Scores">
+  <img src="docs/figures/composite_scores_histograms.png" alt="Histograms of Composite Scores">
   <p class="figure-caption">Figure 1: Histograms of Composite Scores (Dependency, Learning, Behavior, Benefit, Usage, Risk)</p>
   <p><strong>Meaning and Interpretation:</strong> These histograms illustrate the distribution of student responses across the six LLM impact dimensions. Usage and Risk are skewed toward higher values, while Learning peaks at lower scores. This highlights the gap between frequent LLM adoption and perceived deep learning gains.</p>
 
-  <img src="docs/figures/composite_scores_boxplot_improved.png"
-       alt="Boxplot of Composite Scores">
+  <img src="docs/figures/composite_scores_boxplot_improved.png" alt="Boxplot of Composite Scores">
   <p class="figure-caption">Figure 2: Boxplot Comparison of Composite Scores</p>
   <p><strong>Meaning and Interpretation:</strong> The boxplot shows central tendency and spread. Usage and Risk have higher medians, while Learning has the lowest median and widest variability, confirming weak translation from usage to deep learning outcomes.</p>
 
@@ -84,6 +82,7 @@
   </div>
 
   <h3>Individual Score Distributions</h3>
+
   <img src="docs/figures/usage_student_histogram.png" alt="Usage Student Histogram">
   <p class="figure-caption">Figure 3: Distribution of LLM Usage Scores (Students)</p>
   <p><strong>Meaning:</strong> Strong adoption of LLMs in daily academic tasks.</p>
@@ -151,7 +150,7 @@
     <h3>Data Update Logic</h3>
     <p>To keep results current:</p>
     <ol>
-      <li>Add new responses to <code>data/survey_responses.csv</code> (or .xlsx).</li>
+      <li>Add new responses to <code>data/survey_responses.csv</code> (or the Excel file).</li>
       <li>Run <code>python src/analyze_survey.py</code> — this cleans data, calculates scores, normalizes, and regenerates all figures in <code>docs/figures/</code>.</li>
       <li>Commit and push changes to GitHub. The live site updates automatically.</li>
     </ol>
@@ -159,29 +158,25 @@
     <h3>Repository Usage</h3>
     <p><strong>Folder Structure:</strong></p>
     <ul>
-      <li><code>/data/</code> — Raw and processed survey data</li>
-      <li><code>/src/</code> — Analysis scripts (cleaning, scoring, plotting)</li>
+      <li><code>/data/</code> — Survey data</li>
+      <li><code>/src/</code> — Analysis scripts</li>
       <li><code>/docs/figures/</code> — All generated visualizations</li>
-      <li>Root — HTML files (index.html, results.html, etc.)</li>
+      <li>Root — HTML files</li>
     </ul>
-    <p>Clone: <code>git clone https://github.com/anthonyjmitchell-byte/LLM-Learning-Consultants.git</code><br>
-    Install: <code>pip install -r requirements.txt</code><br>
-    Run analysis: <code>python src/analyze_survey.py</code><br>
-    View locally or deploy via GitHub Pages.</p>
 
     <h3>Website Navigation & Interaction</h3>
     <p>This is a static multi-page site on GitHub Pages.</p>
     <ul>
       <li><strong>Home (index.html)</strong>: Project overview and links.</li>
       <li><strong>Results & Analysis (this page)</strong>: All graphs, interpretations, and methodology.</li>
-      <li>Navigation: Use the Back to Home button or browser controls. Fully responsive.</li>
-      <li>Interaction: Static content designed for easy reading. Graphs include alt text for accessibility.</li>
+      <li>Navigation: Use the Back to Home button. Fully responsive.</li>
+      <li>Interaction: Static content designed for easy reading with alt text for accessibility.</li>
     </ul>
   </div>
 
   <footer style="text-align:center; margin-top:80px; color:#6c757d;">
     <p>Capstone Project 2025–2026 • Lewis University</p>
-    <p>Full deliverables (code, data, documentation, live site) available in the GitHub repository.</p>
+    <p>Full deliverables available in the GitHub repository.</p>
   </footer>
 </body>
 </html>

@@ -152,23 +152,54 @@
   </div>
   <p><strong>Meaning:</strong> Generally low problematic behaviors, though some higher scores exist.</p>
 
+  <!-- ====================== STUDENTS VS ALUMNI SECTION (IMPROVED) ====================== -->
   <h2>Survey Analysis Results: Students vs Alumni</h2>
-  <p>All composite scores in this section are normalized to a 0–1 scale for fair comparison between current undergraduate students and alumni/graduates.</p>
+  <p>All composite scores in this section are normalized to a 0–1 scale for fair comparison between current undergraduate students and alumni/graduates. Normalization allows direct visual and statistical comparison across groups despite potential differences in how the original scales were constructed.</p>
 
   <h3>1. Student LLM Impact Profile</h3>
   <img src="docs/figures/students_radar.png" alt="Student LLM Impact Radar Chart">
   <p class="figure-caption">Figure 9: Student LLM Impact Profile (Normalized 0–1 Scale)</p>
-  <p><strong>Meaning and Interpretation:</strong> This radar chart shows prominent spikes in Usage and Dependency with a shorter Learning Impact spoke. Current CS students heavily integrate LLMs but see limited gains in deep learning skills. Moderate Benefit and low-to-moderate Risk/Behavior indicate productivity advantages with reasonable caution. This fulfills the project goal of mapping integration patterns and highlights the need for better pedagogical strategies.</p>
+  
+  <div class="detailed-analysis">
+    <h4>Detailed Interpretation</h4>
+    <p>The radar chart for current Computer Science students reveals a distinct profile characterized by prominent spikes in <strong>Usage</strong> and <strong>Dependency</strong>. These high scores indicate that today’s undergraduates have deeply integrated Large Language Models into their daily academic routines — from code generation and debugging to idea generation and assignment support.</p>
+    
+    <p>In contrast, the <strong>Learning Impact</strong> spoke is noticeably shorter, reflecting limited perceived gains in deep conceptual understanding, critical thinking, and long-term retention of core CS competencies. Moderate scores in <strong>Perceived Benefits</strong> suggest students clearly value the productivity advantages LLMs provide, while <strong>Risk</strong> and <strong>Behavior</strong> remain at low-to-moderate levels, indicating reasonable awareness of potential downsides without widespread problematic behavioral changes.</p>
+    
+    <p>This pattern fulfills the project’s goal of mapping current integration patterns and underscores a key tension: heavy adoption and short-term productivity gains have not yet translated into stronger deep learning outcomes. The profile highlights the urgent need for pedagogical strategies that encourage more mindful, reflective, and scaffolded use of LLMs rather than passive reliance.</p>
+  </div>
+
+  <p><strong>Meaning and Interpretation (Summary):</strong> Current CS students heavily integrate LLMs but see limited gains in deep learning skills. Moderate Benefit and low-to-moderate Risk/Behavior indicate productivity advantages with reasonable caution. This highlights the need for better pedagogical strategies.</p>
 
   <h3>2. Alumni LLM Impact Profile</h3>
   <img src="docs/figures/alumni_radar.png" alt="Alumni LLM Impact Radar Chart">
   <p class="figure-caption">Figure 10: Alumni LLM Impact Profile (Normalized 0–1 Scale)</p>
-  <p><strong>Meaning and Interpretation:</strong> Alumni show lower Dependency and Usage than current students. Learning Impact remains weak, suggesting the usage–learning gap may persist after graduation. Benefit and Risk/Behavior levels are comparable. This indicates that heavy LLM reliance during studies does not automatically yield stronger long-term learning outcomes.</p>
+  
+  <div class="detailed-analysis">
+    <h4>Detailed Interpretation</h4>
+    <p>The alumni radar chart shows a more balanced but still concerning profile. Compared to current students, alumni report noticeably <strong>lower Dependency</strong> and <strong>Usage Frequency</strong>. This reduction may reflect changes in professional workflows, greater experience with traditional problem-solving methods, or reduced academic pressure after graduation.</p>
+    
+    <p>Importantly, the <strong>Learning Impact</strong> spoke remains short and weak — similar to that of current students. This persistence of low perceived learning gains suggests that the usage–learning gap observed during undergraduate studies does not automatically resolve itself after graduation. Moderate levels of <strong>Perceived Benefits</strong>, <strong>Risk</strong>, and <strong>Behavior</strong> are largely comparable between the two groups, indicating that the practical advantages and risk awareness of LLMs carry forward into professional life, but deep learning outcomes lag behind.</p>
+    
+    <p>These findings imply that heavy LLM reliance during university years may not build stronger long-term foundational skills unless deliberately supported by targeted instructional design. The alumni profile serves as a cautionary signal: without intervention, the current generation of students risks entering the workforce with solid productivity tools but weaker independent problem-solving and conceptual mastery.</p>
+  </div>
+
+  <p><strong>Meaning and Interpretation (Summary):</strong> Alumni show lower Dependency and Usage than current students. Learning Impact remains weak, suggesting the usage–learning gap may persist after graduation. Benefit and Risk/Behavior levels are comparable. This indicates that heavy LLM reliance during studies does not automatically yield stronger long-term learning outcomes.</p>
 
   <h3>3. LLM Impact Comparison: Students vs Alumni</h3>
   <img src="docs/figures/students_vs_alumni_bar.png" alt="Students vs Alumni Comparison Bar Chart">
   <p class="figure-caption">Figure 11: LLM Impact Comparison – Students vs Alumni (Normalized 0–1 Scale)</p>
-  <p><strong>Meaning and Interpretation:</strong> Students score higher on Usage and Dependency. Both groups show modest Benefit and strikingly low Learning Impact. This exposes a systemic gap between LLM adoption and improvements in core CS competencies, strongly supporting the capstone’s central thesis.</p>
+  
+  <div class="detailed-analysis">
+    <h4>Detailed Interpretation</h4>
+    <p>The side-by-side bar comparison provides a direct and powerful visualization of differences and similarities between the two groups. Current students score substantially higher on <strong>Usage Frequency</strong> and <strong>LLM Dependency</strong>, confirming more intensive integration of generative AI tools during their studies.</p>
+    
+    <p>Both groups exhibit only modest scores in <strong>Perceived Benefits</strong>, suggesting that while LLMs are valued for efficiency, their perceived value does not reach transformative levels. Most strikingly, both current students and alumni display very low scores on <strong>Learning Impact</strong> — the shortest bar in the comparison. This consistent weakness across cohorts strongly exposes a systemic gap between rapid LLM adoption and meaningful improvements in core Computer Science competencies such as algorithmic thinking, system design, debugging mindset, and theoretical understanding.</p>
+    
+    <p>The comparable levels of <strong>Risk</strong> and <strong>Behavior</strong> further suggest that awareness of potential downsides exists but has not yet led to significant behavioral shifts or stronger learning outcomes. Overall, this comparative analysis robustly supports the capstone’s central thesis: widespread LLM adoption is delivering short-term productivity gains but failing to proportionally enhance deep, durable learning. The persistence of this gap from student years into alumni experience calls for curriculum-level reforms, including explicit LLM literacy training, redesigned assessments that discourage over-reliance, and assignments that require students to explain, critique, and build upon AI-generated outputs.</p>
+  </div>
+
+  <p><strong>Meaning and Interpretation (Summary):</strong> Students score higher on Usage and Dependency. Both groups show modest Benefit and strikingly low Learning Impact. This exposes a systemic gap between LLM adoption and improvements in core CS competencies, strongly supporting the capstone’s central thesis.</p>
 
   <!-- ====================== METHODOLOGY & DOCUMENTATION ====================== -->
   <div class="methodology">

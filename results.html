@@ -133,7 +133,7 @@
     <p><strong>Key Assumptions:</strong></p>
     <ul>
       <li>Survey responses accurately reflect participants’ experiences (self-reported data).</li>
-      <li>Composite scoring formulas appropriately capture the constructs.</li>
+      <li>Composite scoring formulas capture the constructs.</li>
       <li>Normalization to 0–1 scale enables fair comparison without major distortion.</li>
       <li>The Lewis University sample provides useful internal insights.</li>
       <li>LLM usage patterns were relatively stable during data collection.</li>
@@ -146,37 +146,16 @@
       <li>No statistical significance testing performed due to sample size.</li>
     </ul>
     <p><strong>Model Validation:</strong> Outputs were cross-checked against raw data, distributions inspected for anomalies, and all graphs regenerated from the same dataset for reproducibility.</p>
-
-    <h3>Data Update Logic</h3>
-    <p>To keep results current:</p>
-    <ol>
-      <li>Add new responses to <code>data/survey_responses.csv</code> (or the Excel file).</li>
-      <li>Run <code>python src/analyze_survey.py</code> — this cleans data, calculates scores, normalizes, and regenerates all figures in <code>docs/figures/</code>.</li>
-      <li>Commit and push changes to GitHub. The live site updates automatically.</li>
-    </ol>
-
-    <h3>Repository Usage</h3>
-    <p><strong>Folder Structure:</strong></p>
-    <ul>
-      <li><code>/data/</code> — Survey data</li>
-      <li><code>/src/</code> — Analysis scripts</li>
-      <li><code>/docs/figures/</code> — All generated visualizations</li>
-      <li>Root — HTML files</li>
-    </ul>
-
+ 
     <h3>Website Navigation & Interaction</h3>
-    <p>This is a static multi-page site on GitHub Pages.</p>
     <ul>
-      <li><strong>Home (index.html)</strong>: Project overview and links.</li>
-      <li><strong>Results & Analysis (this page)</strong>: All graphs, interpretations, and methodology.</li>
-      <li>Navigation: Use the Back to Home button. Fully responsive.</li>
-      <li>Interaction: Static content designed for easy reading with alt text for accessibility.</li>
+      <li><strong>Home </strong>: Project overview and links.</li>
+      <li><strong>Results & Analysis </strong>: All graphs, interpretations, and methodology.</li>
     </ul>
   </div>
 
   <footer style="text-align:center; margin-top:80px; color:#6c757d;">
     <p>Capstone Project 2025–2026 • Lewis University</p>
-    <p>Full deliverables available in the GitHub repository.</p>
   </footer>
 </body>
 </html>

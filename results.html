@@ -7,10 +7,10 @@
   <style>
     body {
       font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.6;
+      line-height: 1.7;
       color: #212529;
       background-color: #f8f9fa;
-      max-width: 1000px;
+      max-width: 1080px;
       margin: 0 auto;
       padding: 30px 20px;
     }
@@ -20,15 +20,15 @@
       height: auto;
       border: 1px solid #ddd;
       border-radius: 8px;
-      margin: 20px 0 10px 0;
+      margin: 25px 0 12px 0;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
     .insight {
       background: #e9f5ff;
-      padding: 18px 22px;
+      padding: 20px 25px;
       border-left: 6px solid #0d6efd;
       border-radius: 6px;
-      margin: 25px 0;
+      margin: 30px 0;
     }
     .figure-caption {
       font-style: italic;
@@ -37,9 +37,16 @@
       margin: 8px 0 20px 0;
       font-size: 0.95em;
     }
+    .detailed-analysis {
+      background: #f8f9fa;
+      padding: 25px 30px;
+      border-radius: 8px;
+      margin: 35px 0;
+      border: 1px solid #dee2e6;
+    }
     .methodology {
       background: #f1f3f5;
-      padding: 20px 25px;
+      padding: 25px 30px;
       border-radius: 8px;
       margin: 40px 0;
     }
@@ -52,6 +59,7 @@
       display: inline-block;
       margin-bottom: 30px;
     }
+    ul { padding-left: 20px; }
   </style>
 </head>
 <body>
@@ -61,10 +69,37 @@
 
   <h2>Composite Scores Overview</h2>
   <p>Histograms and boxplots showing the distribution of composite scores across six key dimensions for current Computer Science students.</p>
-
+  
   <img src="docs/figures/composite_scores_histograms.png" alt="Histograms of Composite Scores">
   <p class="figure-caption">Figure 1: Histograms of Composite Scores (Dependency, Learning, Behavior, Benefit, Usage, Risk)</p>
-  <p><strong>Meaning and Interpretation:</strong> These histograms illustrate the distribution of student responses across the six LLM impact dimensions. Usage and Risk are skewed toward higher values, while Learning peaks at lower scores. This highlights the gap between frequent LLM adoption and perceived deep learning gains.</p>
+
+  <div class="detailed-analysis">
+    <h3>Detailed Analysis and Interpretation</h3>
+    
+    <p>The figure above displays the distribution of student responses across six critical dimensions of LLM (Large Language Model) impact using histograms with overlaid kernel density curves. Each subplot reveals important patterns in how Computer Science students at Lewis University engage with tools like ChatGPT, Grok, Claude, and similar AI assistants.</p>
+
+    <h4>Dimension-by-Dimension Breakdown:</h4>
+    
+    <ul>
+      <li><strong>Dependency (Top-left)</strong>: Shows a bimodal distribution with peaks at low (~0.8) and moderate-to-high (~2.0 and ~3.0) levels. This indicates two distinct groups — students who remain largely independent and those who have integrated LLMs heavily into their academic workflow.</li>
+      
+      <li><strong>Learning (Top-middle)</strong>: Strongly skewed toward lower-to-moderate scores (peak around 1.6–1.8). Despite frequent LLM use, many students report limited perceived gains in deep conceptual understanding, critical thinking, and long-term retention.</li>
+      
+      <li><strong>Behavior (Top-right)</strong>: Heavily concentrated at low scores. Most students do not exhibit extreme problematic behaviors (such as over-reliance leading to academic dishonesty or complete loss of critical thinking), though a small tail exists at higher values.</li>
+      
+      <li><strong>Benefit (Bottom-left)</strong>: Extremely right-skewed with a massive peak at the highest scores (~1.4–1.5). Students overwhelmingly perceive strong practical benefits, including increased productivity, faster coding, and improved debugging efficiency.</li>
+      
+      <li><strong>Usage (Bottom-middle)</strong>: Broad distribution with high overall scores (peak around 2.0–2.5). This confirms widespread and frequent adoption of LLMs among current CS students.</li>
+      
+      <li><strong>Risk (Bottom-right)</strong>: Roughly bell-shaped with a peak around 2.5–3.0 and a tail extending to higher risk perceptions (up to 5.0). Students demonstrate moderate-to-high awareness of potential downsides, including skill atrophy, ethical concerns, and over-dependence.</li>
+    </ul>
+
+    <p><strong>Core Insight:</strong> There is a clear and concerning <strong>gap between high LLM adoption and perceived deep learning gains</strong>. While Usage and Benefit scores are high, the Learning dimension consistently peaks at lower values. This suggests that although LLMs provide significant short-term productivity advantages, they may be undermining the cognitive struggle necessary for genuine mastery of Computer Science concepts.</p>
+
+    <p>Students appear to be trading deep learning for convenience — a pattern that could have long-term implications for skill development, problem-solving ability, and professional readiness.</p>
+  </div>
+
+  <p><strong>Meaning and Interpretation (Summary):</strong> These histograms illustrate the distribution of student responses across the six LLM impact dimensions. Usage and Risk are skewed toward higher values, while Learning peaks at lower scores. This highlights the gap between frequent LLM adoption and perceived deep learning gains.</p>
 
   <img src="docs/figures/composite_scores_boxplot_improved.png" alt="Boxplot of Composite Scores">
   <p class="figure-caption">Figure 2: Boxplot Comparison of Composite Scores</p>
@@ -82,7 +117,6 @@
   </div>
 
   <h3>Individual Score Distributions</h3>
-
   <img src="docs/figures/usage_student_histogram.png" alt="Usage Student Histogram">
   <p class="figure-caption">Figure 3: Distribution of LLM Usage Scores (Students)</p>
   <p><strong>Meaning:</strong> Strong adoption of LLMs in daily academic tasks.</p>
@@ -128,7 +162,7 @@
   <!-- ====================== METHODOLOGY & DOCUMENTATION ====================== -->
   <div class="methodology">
     <h2>Methodology, Assumptions, Limitations & Documentation</h2>
-    
+   
     <h3>Modeling Assumptions & Limitations</h3>
     <p><strong>Key Assumptions:</strong></p>
     <ul>
@@ -146,11 +180,11 @@
       <li>No statistical significance testing performed due to sample size.</li>
     </ul>
     <p><strong>Model Validation:</strong> Outputs were cross-checked against raw data, distributions inspected for anomalies, and all graphs regenerated from the same dataset for reproducibility.</p>
- 
+    
     <h3>Website Navigation & Interaction</h3>
     <ul>
-      <li><strong>Home </strong>: Project overview and links.</li>
-      <li><strong>Results & Analysis </strong>: All graphs, interpretations, and methodology.</li>
+      <li><strong>Home</strong>: Project overview and links.</li>
+      <li><strong>Results & Analysis</strong>: All graphs, interpretations, and methodology.</li>
     </ul>
   </div>
 

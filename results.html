@@ -30,13 +30,6 @@
       border-radius: 6px;
       margin: 30px 0;
     }
-    .figure-caption {
-      font-style: italic;
-      color: #495057;
-      text-align: center;
-      margin: 8px 0 20px 0;
-      font-size: 0.95em;
-    }
     .detailed-analysis {
       background: #f8f9fa;
       padding: 25px 30px;
@@ -74,36 +67,44 @@
   <p class="figure-caption">Figure 1: Histograms of Composite Scores (Dependency, Learning, Behavior, Benefit, Usage, Risk)</p>
 
   <div class="detailed-analysis">
-    <h3>Analysis and Interpretation</h3>
-    
-    <p>The graphs above display the distribution of student responses across six critical dimensions of LLM (Large Language Model) impact using histograms with overlaid kernel density curves. Each subplot reveals important patterns in how Computer Science students at Lewis University engage with tools like ChatGPT, Grok, Claude, and similar AI assistants.</p>
-
-    <h4>Dimension-by-Dimension Breakdown:</h4>
-    
-    <ul>
-      <li><strong>Dependency (Top-left)</strong>: Shows a bimodal distribution with peaks at low (~0.8) and moderate-to-high (~2.0 and ~3.0) levels. This indicates two distinct groups — students who remain largely independent and those who have integrated LLMs heavily into their academic workflow.</li>
-      
-      <li><strong>Learning (Top-middle)</strong>: Strongly skewed toward lower-to-moderate scores (peak around 1.6–1.8). Despite frequent LLM use, many students report limited perceived gains in deep conceptual understanding, critical thinking, and long-term retention.</li>
-      
-      <li><strong>Behavior (Top-right)</strong>: Heavily concentrated at low scores. Most students do not exhibit extreme problematic behaviors (such as over-reliance leading to academic dishonesty or complete loss of critical thinking), though a small tail exists at higher values.</li>
-      
-      <li><strong>Benefit (Bottom-left)</strong>: Extremely right-skewed with a massive peak at the highest scores (~1.4–1.5). Students overwhelmingly perceive strong practical benefits, including increased productivity, faster coding, and improved debugging efficiency.</li>
-      
-      <li><strong>Usage (Bottom-middle)</strong>: Broad distribution with high overall scores (peak around 2.0–2.5). This confirms widespread and frequent adoption of LLMs among current CS students.</li>
-      
-      <li><strong>Risk (Bottom-right)</strong>: Roughly bell-shaped with a peak around 2.5–3.0 and a tail extending to higher risk perceptions (up to 5.0). Students demonstrate moderate-to-high awareness of potential downsides, including skill atrophy, ethical concerns, and over-dependence.</li>
-    </ul>
-
-    <p><strong>Core Insight:</strong> There is a clear and concerning <strong>gap between high LLM adoption and perceived deep learning gains</strong>. While Usage and Benefit scores are high, the Learning dimension consistently peaks at lower values. This suggests that although LLMs provide significant short-term productivity advantages, they may be undermining the cognitive struggle necessary for genuine mastery of Computer Science concepts.</p>
-
-    <p>Students appear to be trading deep learning for convenience — a pattern that could have long-term implications for skill development, problem-solving ability, and professional readiness.</p>
+    <h3>Detailed Analysis of Histograms (Figure 1)</h3>
+    <p>The histograms with kernel density overlays reveal how Computer Science students’ experiences with LLMs vary across six dimensions. Usage and Benefit show strong right-skew toward high values, indicating widespread adoption and perceived productivity gains. In contrast, Perceived Learning Impact peaks at lower scores, highlighting a critical gap: students use LLMs frequently and find them beneficial for immediate tasks, yet they report limited deep learning outcomes. Dependency is bimodal, suggesting two distinct groups — light and heavy users. Risk perception is moderately spread, while Behavioral Change remains mostly low.</p>
   </div>
 
-  <p><strong>Meaning and Interpretation (Summary):</strong> These histograms illustrate the distribution of student responses across the six LLM impact dimensions. Usage and Risk are skewed toward higher values, while Learning peaks at lower scores. This highlights the gap between frequent LLM adoption and perceived deep learning gains.</p>
+  <p><strong>Meaning and Interpretation:</strong> These histograms illustrate the distribution of student responses across the six LLM impact dimensions. Usage and Risk are skewed toward higher values, while Learning peaks at lower scores. This highlights the gap between frequent LLM adoption and perceived deep learning gains.</p>
 
-  <img src="docs/figures/composite_scores_boxplot_improved.png" alt="Boxplot of Composite Scores">
+  <!-- ====================== NEW BOXPLOT SECTION ====================== -->
+  <h2>Boxplot Comparison of Composite Scores</h2>
+  
+  <img src="docs/figures/composite_scores_boxplot_improved.png" alt="Boxplot Comparison of Composite Scores">
   <p class="figure-caption">Figure 2: Boxplot Comparison of Composite Scores</p>
-  <p><strong>Meaning and Interpretation:</strong> The boxplot shows central tendency and spread. Usage and Risk have higher medians, while Learning has the lowest median and widest variability, confirming weak translation from usage to deep learning outcomes.</p>
+
+  <div class="detailed-analysis">
+    <h3>Detailed Analysis and Interpretation of the Boxplot (Figure 2)</h3>
+    
+    <p>This boxplot provides a clear statistical summary of central tendency (median), spread (interquartile range), and outliers for each of the six composite scores. The y-axis represents the composite score values (note that the scales differ slightly per dimension based on how the composites were constructed, but comparisons within the plot remain valid).</p>
+    
+    <h4>Key Observations by Dimension:</h4>
+    <ul>
+      <li><strong>LLM Dependency</strong> (light blue): Median around 2.0–2.2, with a wide interquartile range (IQR) and whiskers extending from ~0.3 to ~3.2. This shows moderate-to-high dependency with significant variability — some students barely rely on LLMs, while others depend on them heavily for coursework and problem-solving.</li>
+      
+      <li><strong>Perceived Learning Impact</strong> (light blue): Lowest median of all dimensions (approximately 1.7). The box is relatively narrow but has the widest overall spread and several high outliers. This confirms that while a few students report strong learning gains, the typical student experiences only modest benefits in terms of deep conceptual understanding and skill retention.</li>
+      
+      <li><strong>Behavioral Change</strong> (light blue): Very low median (~0.5) and tight clustering near the bottom. Most students show minimal negative behavioral shifts (e.g., reduced critical thinking or over-reliance leading to academic shortcuts). The presence of a few higher outliers suggests that problematic behavior is not widespread but exists in a small subset of students.</li>
+      
+      <li><strong>Perceived Benefits</strong> (medium blue): Median around 1.3, with a compact IQR. Students consistently report strong practical benefits such as faster coding, better debugging, and improved productivity. The distribution is positively skewed, reinforcing that LLMs are viewed as highly useful tools in the short term.</li>
+      
+      <li><strong>Usage Frequency</strong> (dark blue): High median (~2.0–2.5) and a solid IQR from ~1.5 to ~2.8. This dimension has one of the highest central tendencies, confirming frequent and regular use of LLMs among current CS students.</li>
+      
+      <li><strong>Perceived Risks</strong> (dark blue): Highest median of the set (approximately 2.5–2.8), with a relatively wide box and upper whisker reaching 3.3+. Students demonstrate substantial awareness of potential downsides, including skill atrophy, ethical issues, dependency risks, and accuracy concerns. The distribution shows meaningful variability in risk perception.</li>
+    </ul>
+
+    <p><strong>Central Thesis Reinforced:</strong> The boxplot vividly illustrates the disconnect between high Usage Frequency and Perceived Benefits on one side, and the relatively low Perceived Learning Impact on the other. Despite heavy adoption and recognized advantages, the median learning outcome remains the weakest among all dimensions. This “usage–learning gap” is the most important finding of the study and strongly supports the need for pedagogical interventions that promote more mindful and effective LLM integration in Computer Science education.</p>
+    
+    <p>Additionally, the higher median for Perceived Risks compared to Behavioral Change suggests that students are cognitively aware of the dangers but have not yet widely translated that awareness into changed behavior.</p>
+  </div>
+
+  <p><strong>Meaning and Interpretation (Summary):</strong> The boxplot shows central tendency and spread. Usage and Risk have higher medians, while Learning has the lowest median and widest variability, confirming weak translation from usage to deep learning outcomes.</p>
 
   <div class="insight">
     <strong>Key Findings from Composite Scores:</strong>

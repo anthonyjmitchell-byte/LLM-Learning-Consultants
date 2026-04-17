@@ -34,7 +34,7 @@
       background: #f8f9fa;
       padding: 25px 30px;
       border-radius: 8px;
-      margin: 35px 0;
+      margin: 30px 0 40px 0;
       border: 1px solid #dee2e6;
     }
     .methodology {
@@ -73,7 +73,6 @@
 
   <p><strong>Meaning and Interpretation:</strong> These histograms illustrate the distribution of student responses across the six LLM impact dimensions. Usage and Risk are skewed toward higher values, while Learning peaks at lower scores. This highlights the gap between frequent LLM adoption and perceived deep learning gains.</p>
 
-  <!-- ====================== NEW BOXPLOT SECTION ====================== -->
   <h2>Boxplot Comparison of Composite Scores</h2>
   
   <img src="docs/figures/composite_scores_boxplot_improved.png" alt="Boxplot Comparison of Composite Scores">
@@ -81,27 +80,7 @@
 
   <div class="detailed-analysis">
     <h3>Detailed Analysis and Interpretation of the Boxplot (Figure 2)</h3>
-    
-    <p>This boxplot provides a clear statistical summary of central tendency (median), spread (interquartile range), and outliers for each of the six composite scores. The y-axis represents the composite score values (note that the scales differ slightly per dimension based on how the composites were constructed, but comparisons within the plot remain valid).</p>
-    
-    <h4>Key Observations by Dimension:</h4>
-    <ul>
-      <li><strong>LLM Dependency</strong> (light blue): Median around 2.0–2.2, with a wide interquartile range (IQR) and whiskers extending from ~0.3 to ~3.2. This shows moderate-to-high dependency with significant variability — some students barely rely on LLMs, while others depend on them heavily for coursework and problem-solving.</li>
-      
-      <li><strong>Perceived Learning Impact</strong> (light blue): Lowest median of all dimensions (approximately 1.7). The box is relatively narrow but has the widest overall spread and several high outliers. This confirms that while a few students report strong learning gains, the typical student experiences only modest benefits in terms of deep conceptual understanding and skill retention.</li>
-      
-      <li><strong>Behavioral Change</strong> (light blue): Very low median (~0.5) and tight clustering near the bottom. Most students show minimal negative behavioral shifts (e.g., reduced critical thinking or over-reliance leading to academic shortcuts). The presence of a few higher outliers suggests that problematic behavior is not widespread but exists in a small subset of students.</li>
-      
-      <li><strong>Perceived Benefits</strong> (medium blue): Median around 1.3, with a compact IQR. Students consistently report strong practical benefits such as faster coding, better debugging, and improved productivity. The distribution is positively skewed, reinforcing that LLMs are viewed as highly useful tools in the short term.</li>
-      
-      <li><strong>Usage Frequency</strong> (dark blue): High median (~2.0–2.5) and a solid IQR from ~1.5 to ~2.8. This dimension has one of the highest central tendencies, confirming frequent and regular use of LLMs among current CS students.</li>
-      
-      <li><strong>Perceived Risks</strong> (dark blue): Highest median of the set (approximately 2.5–2.8), with a relatively wide box and upper whisker reaching 3.3+. Students demonstrate substantial awareness of potential downsides, including skill atrophy, ethical issues, dependency risks, and accuracy concerns. The distribution shows meaningful variability in risk perception.</li>
-    </ul>
-
-    <p><strong>Central Thesis Reinforced:</strong> The boxplot vividly illustrates the disconnect between high Usage Frequency and Perceived Benefits on one side, and the relatively low Perceived Learning Impact on the other. Despite heavy adoption and recognized advantages, the median learning outcome remains the weakest among all dimensions. This “usage–learning gap” is the most important finding of the study and strongly supports the need for pedagogical interventions that promote more mindful and effective LLM integration in Computer Science education.</p>
-    
-    <p>Additionally, the higher median for Perceived Risks compared to Behavioral Change suggests that students are cognitively aware of the dangers but have not yet widely translated that awareness into changed behavior.</p>
+    <p>This boxplot provides a clear statistical summary of central tendency (median), spread (interquartile range), and outliers for each of the six composite scores. Usage Frequency and Perceived Risks show higher medians, while Perceived Learning Impact has the lowest median and widest variability. This visual strongly confirms the weak translation from heavy LLM usage to genuine deep learning outcomes in Computer Science education.</p>
   </div>
 
   <p><strong>Meaning and Interpretation (Summary):</strong> The boxplot shows central tendency and spread. Usage and Risk have higher medians, while Learning has the lowest median and widest variability, confirming weak translation from usage to deep learning outcomes.</p>
@@ -117,29 +96,60 @@
     </ul>
   </div>
 
-  <h3>Individual Score Distributions</h3>
-  <img src="docs/figures/usage_student_histogram.png" alt="Usage Student Histogram">
+  <h2>Individual Score Distributions</h2>
+
+  <!-- Usage Frequency -->
+  <img src="docs/figures/usage_student_histogram.png" alt="Distribution of Usage Frequency">
   <p class="figure-caption">Figure 3: Distribution of LLM Usage Scores (Students)</p>
+  <div class="detailed-analysis">
+    <h3>Detailed Analysis – Usage Frequency (Mean = 1.97)</h3>
+    <p>The distribution is right-skewed with a clear peak between 1.5 and 2.0, followed by another rise at the highest bin (3.0). The red dashed line marks the mean at 1.97. This indicates strong and frequent adoption of LLMs among Computer Science students for daily academic tasks such as coding, debugging, research, and assignment completion. A significant portion of students uses LLMs at moderate-to-high intensity, confirming that these tools have become a standard part of the modern CS workflow.</p>
+  </div>
   <p><strong>Meaning:</strong> Strong adoption of LLMs in daily academic tasks.</p>
 
-  <img src="docs/figures/dependency_student_histogram.png" alt="Dependency Student Histogram">
+  <!-- LLM Dependency -->
+  <img src="docs/figures/dependency_student_histogram.png" alt="Distribution of LLM Dependency">
   <p class="figure-caption">Figure 4: Distribution of LLM Dependency Scores (Students)</p>
+  <div class="detailed-analysis">
+    <h3>Detailed Analysis – LLM Dependency (Mean = 2.02)</h3>
+    <p>This distribution shows a prominent peak at 2.0 and a secondary rise at 3.0, with the mean at 2.02. The shape suggests moderate-to-high reliance on LLMs for core academic tasks. While some students maintain lower dependency (scores below 1.5), a large group has integrated LLMs deeply into their problem-solving process. This bimodal tendency points to two distinct user types: those who use LLMs occasionally as a supplement and those who treat them as a primary assistance tool.</p>
+  </div>
   <p><strong>Meaning:</strong> Moderate-to-high reliance on LLMs for core tasks.</p>
 
-  <img src="docs/figures/learning_student_histogram.png" alt="Learning Student Histogram">
+  <!-- Perceived Learning Impact -->
+  <img src="docs/figures/learning_student_histogram.png" alt="Distribution of Perceived Learning Impact">
   <p class="figure-caption">Figure 5: Distribution of Perceived Learning Impact Scores (Students)</p>
+  <div class="detailed-analysis">
+    <h3>Detailed Analysis – Perceived Learning Impact (Mean = 1.60)</h3>
+    <p>The distribution is centered around 1.6–1.8 with a mean of 1.60. Although a smaller group reports higher learning gains (around 2.0–2.2), the majority of responses cluster at moderate-to-low scores. This pattern reveals a critical gap: despite high usage and dependency, students perceive only limited improvements in deep conceptual understanding, critical thinking, and long-term retention of Computer Science knowledge. The density curve further emphasizes that true learning gains lag behind adoption rates.</p>
+  </div>
   <p><strong>Meaning and Interpretation:</strong> Shifted toward lower scores, showing limited perceived gains in conceptual understanding and critical thinking despite high usage.</p>
 
-  <img src="docs/figures/benefit_student_histogram.png" alt="Benefit Student Histogram">
+  <!-- Perceived Benefits -->
+  <img src="docs/figures/benefit_student_histogram.png" alt="Distribution of Perceived Benefits">
   <p class="figure-caption">Figure 6: Distribution of Perceived Benefit Scores (Students)</p>
+  <div class="detailed-analysis">
+    <h3>Detailed Analysis – Perceived Benefits (Mean = 1.12)</h3>
+    <p>This distribution is heavily right-skewed, with the highest bar at the maximum score (~1.4–1.5) and a mean of 1.12. Students overwhelmingly report strong practical benefits from LLM use, particularly in productivity, speed of task completion, and assistance with routine coding/debugging work. However, the shape suggests these benefits are mostly surface-level rather than transformative for deeper learning.</p>
+  </div>
   <p><strong>Meaning:</strong> Clear productivity benefits, but mostly surface-level.</p>
 
-  <img src="docs/figures/risk_student_histogram.png" alt="Risk Student Histogram">
+  <!-- Perceived Risks -->
+  <img src="docs/figures/risk_student_histogram.png" alt="Distribution of Perceived Risks">
   <p class="figure-caption">Figure 7: Distribution of Perceived Risk Scores (Students)</p>
+  <div class="detailed-analysis">
+    <h3>Detailed Analysis – Perceived Risks (Mean = 2.48)</h3>
+    <p>The distribution is roughly bell-shaped with a peak around 2.5–3.0 and a mean of 2.48. A notable portion of students also scores at the higher end (4–5). This indicates reasonable to moderately high awareness of the risks associated with LLM use, including potential skill atrophy, over-dependence, ethical concerns, and accuracy issues. The spread shows varied levels of risk perception across the student population.</p>
+  </div>
   <p><strong>Meaning:</strong> Reasonable awareness of risks associated with LLM use.</p>
 
-  <img src="docs/figures/behavior_student_histogram.png" alt="Behavior Student Histogram">
+  <!-- Behavioral Change -->
+  <img src="docs/figures/behavior_student_histogram.png" alt="Distribution of Behavioral Change">
   <p class="figure-caption">Figure 8: Distribution of Problematic Behavior Scores (Students)</p>
+  <div class="detailed-analysis">
+    <h3>Detailed Analysis – Behavioral Change (Mean = 0.45)</h3>
+    <p>This distribution is heavily skewed toward low scores, with a mean of only 0.45. Most students report minimal problematic behavioral changes. However, a visible tail extends to higher scores (0.8–1.0), indicating that a small subset of students may be experiencing more concerning shifts, such as reduced independent problem-solving or over-reliance on AI-generated solutions. Overall, extreme negative behaviors remain limited.</p>
+  </div>
   <p><strong>Meaning:</strong> Generally low problematic behaviors, though some higher scores exist.</p>
 
   <h2>Survey Analysis Results: Students vs Alumni</h2>

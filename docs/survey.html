@@ -2,79 +2,216 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LLM Impact on CS Learning Survey</title>
+    <title>LLM Impact Survey - Get Your AI Dependency Score</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 960px;
-            margin: 40px auto;
-            padding: 20px;
-            line-height: 1.6;
-            background-color: #f9f9f9;
-        }
-        h1 {
-            color: #0066cc;
-            text-align: center;
-        }
-        fieldset {
-            margin: 25px 0;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            background: #fafafa;
-        }
-        legend {
-            font-weight: bold;
-            font-size: 1.1em;
-            color: #0066cc;
-        }
-        label {
-            display: block;
-            margin: 10px 0;
-        }
-        button {
-            padding: 15px 40px;
-            font-size: 18px;
-            background: #0066cc;
-            color: white;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            display: block;
-            margin: 30px auto;
-        }
-        .result-box {
-            background: #e6f3ff;
-            padding: 30px;
-            border: 3px solid #0066cc;
-            border-radius: 12px;
-            margin-top: 40px;
-            display: none;
-        }
-        .score {
-            font-size: 1.5em;
-            font-weight: bold;
-            color: #0066cc;
-        }
+        body {font-family: Arial, sans-serif; max-width: 960px; margin: 40px auto; padding: 20px; line-height: 1.6;}
+        h1, h2 {color: #0066cc;}
+        fieldset {margin: 25px 0; padding: 20px; border: 1px solid #ccc; border-radius: 8px; background: #fafafa;}
+        label {display: block; margin: 10px 0;}
+        button {padding: 15px 40px; font-size: 18px; background: #0066cc; color: white; border: none; border-radius: 6px; cursor: pointer;}
+        .result-box {background: #e6f3ff; padding: 30px; border: 3px solid #0066cc; border-radius: 12px; margin-top: 40px; display: none;}
+        .score {font-size: 1.5em; font-weight: bold; color: #0066cc;}
     </style>
 </head>
 <body>
     <h1>LLM Impact on Computer Science Learning Survey</h1>
-    <p>Complete the survey below and get your personal AI Dependency Score instantly.</p>
+    <p>View the full research results and case studies → <a href="results.html" target="_blank">Results Page</a></p>
 
     <form id="llm-survey">
         
         <fieldset>
-            <legend>1. Consent<br>I have read the information above about this research study. I understand that: • My participation is voluntary... I am at least 18 years of age</legend>
+            <legend><strong>1. Consent<br>I have read the information above about this research study. I understand that:<br>• My participation is voluntary and I may stop at any time.<br>• My responses are anonymous and will be kept confidential.<br>• The results will be used in a master’s thesis and may also be published or presented in academic settings.<br>• I am at least 18 years of age</strong></legend>
             <label><input type="radio" name="consent" value="agree" required> I agree</label>
             <label><input type="radio" name="consent" value="disagree" required> I do not agree to participate</label>
         </fieldset>
-
-        <!-- Add the rest of your 23 questions here. Since the original was very long, I'll give you the structure. 
-             You can copy-paste the remaining fieldsets from your old file. -->
-
-        <!-- For now, here's the submit button and result section -->
+        
+        <fieldset>
+            <legend><strong>2. Understanding of LLM<br>Do you understand that LLM refers to AI tools such as ChatGPT, DeepSeek, Claude and other similar programs?</strong></legend>
+            <label><input type="radio" name="llm_understand" value="1" > Yes</label>
+            <label><input type="radio" name="llm_understand" value="0" > No</label>
+        </fieldset>
+        
+        <fieldset>
+            <legend><strong>3. Years Studied Computer Science<br>How long have you studied computer science in a learning environment such as high school or college?</strong></legend>
+            <label><input type="radio" name="years_cs" value="0.5" > 0–1 years</label>
+            <label><input type="radio" name="years_cs" value="2.5" > 2–3 years</label>
+            <label><input type="radio" name="years_cs" value="4" > 3–5 years</label>
+            <label><input type="radio" name="years_cs" value="5" > 5+ years</label>
+        </fieldset>
+        
+        <fieldset>
+            <legend><strong>4. Academic Level<br>Are you an Undergraduate or Graduate of the Computer Science Department at Lewis University?</strong></legend>
+            <label><input type="radio" name="academic_level" value="0" > Undergraduate</label>
+            <label><input type="radio" name="academic_level" value="1" > Graduate</label>
+        </fieldset>
+        
+        <fieldset>
+            <legend><strong>5. Discipline Studied (Select all that apply)<br>What discipline of computer science have you studied formally or informally?</strong></legend>
+            <label><input type="checkbox" name="disciplines[]" value="1"> Cyber Security</label>
+            <label><input type="checkbox" name="disciplines[]" value="1"> Software Engineering</label>
+            <label><input type="checkbox" name="disciplines[]" value="1"> Data Analytics</label>
+            <label><input type="checkbox" name="disciplines[]" value="1"> AI or Machine Learning</label>
+            <label><input type="checkbox" name="disciplines[]" value="1"> Algorithms and Theory</label>
+            <label><input type="checkbox" name="disciplines[]" value="1"> Programming/Coding</label>
+            <label><input type="checkbox" name="disciplines[]" value="1"> Networking</label>
+            <label><input type="checkbox" name="disciplines[]" value="1"> IT</label>
+            <label><input type="checkbox" name="disciplines[]" value="1"> Computer Graphics</label>
+            <label><input type="checkbox" name="disciplines[]" value="1"> Video Games / Media Development</label>
+            <label><input type="checkbox" name="disciplines[]" value="1"> Other</label>
+        </fieldset>
+        
+        <fieldset>
+            <legend><strong>6. Familiarity with LLMs<br>How familiar are you with LLMs?</strong></legend>
+            <label><input type="radio" name="familiarity" value="0" > I do not know what it is</label>
+            <label><input type="radio" name="familiarity" value="1" > I have heard of it</label>
+            <label><input type="radio" name="familiarity" value="2" > I know a little about it</label>
+            <label><input type="radio" name="familiarity" value="3" > I know a lot about it</label>
+        </fieldset>
+        
+        <fieldset>
+            <legend><strong>7. Availability of LLMs When Starting<br>Were LLM tools available when you started studying computer science?</strong></legend>
+            <label><input type="radio" name="availability" value="0" > No AI tools were available when I started learning</label>
+            <label><input type="radio" name="availability" value="1" > Some AI tools were available when I started learning</label>
+            <label><input type="radio" name="availability" value="2" > AI tools were available when I started learning, but they were not prominent</label>
+            <label><input type="radio" name="availability" value="3" > AI tools were very available when I started learning</label>
+        </fieldset>
+        
+        <fieldset>
+            <legend><strong>8. Personal Use of LLMs (usage index)<br>Do you use LLMs personally (non-school related)?</strong></legend>
+            <label><input type="radio" name="personal_use" value="0" > I do not use it</label>
+            <label><input type="radio" name="personal_use" value="1" > I sometimes use it</label>
+            <label><input type="radio" name="personal_use" value="2" > I use it a lot</label>
+        </fieldset>
+        
+        <fieldset>
+            <legend><strong>9. School Use of LLMs (usage index)<br>Do you use LLM tools to assist in school-related activities such as homework or studying?</strong></legend>
+            <label><input type="radio" name="school_use" value="1" > Yes</label>
+            <label><input type="radio" name="school_use" value="0" > No</label>
+        </fieldset>
+        
+        <fieldset>
+            <legend><strong>10. How LLMs Are Used for School (Select all that apply)<br>How do you use LLM tools for school activities?</strong></legend>
+            <label><input type="checkbox" name="how_used_school[]" value="1"> I need help studying</label>
+            <label><input type="checkbox" name="how_used_school[]" value="1"> I need more explanation for course materials</label>
+            <label><input type="checkbox" name="how_used_school[]" value="1"> I need help answering homework questions</label>
+            <label><input type="checkbox" name="how_used_school[]" value="1"> I need help during online quizzes and tests</label>
+            <label><input type="checkbox" name="how_used_school[]" value="1"> I need visual aids for course materials</label>
+        </fieldset>
+        
+        <fieldset>
+            <legend><strong>11. Dependency on LLMs (dependency index)<br>How much do you depend on LLM tools in your computer science courses?</strong></legend>
+            <label><input type="radio" name="dependency" value="0" > I do not depend on them</label>
+            <label><input type="radio" name="dependency" value="1" > I depend on them a little</label>
+            <label><input type="radio" name="dependency" value="2" > I depend on them a lot</label>
+        </fieldset>
+        
+        <fieldset>
+            <legend><strong>12. Use in General Education<br>How have you used LLM tools for general education courses?</strong></legend>
+            <label><input type="radio" name="gen_ed_use" value="0" > I do not use any tools to help me</label>
+            <label><input type="radio" name="gen_ed_use" value="1" > I research fundamental concepts</label>
+            <label><input type="radio" name="gen_ed_use" value="2" > I use it as a helpful tool</label>
+            <label><input type="radio" name="gen_ed_use" value="3" > I rely on it</label>
+        </fieldset>
+        
+        <fieldset>
+            <legend><strong>13. Helpfulness for Understanding (Learning Impact)<br>How helpful have LLM tools been in improving your understanding of computer science concepts?</strong></legend>
+            <label><input type="radio" name="helpfulness" value="0" > Very unhelpful</label>
+            <label><input type="radio" name="helpfulness" value="1" > Somewhat unhelpful</label>
+            <label><input type="radio" name="helpfulness" value="2" > Neither helpful nor unhelpful</label>
+            <label><input type="radio" name="helpfulness" value="3" > Somewhat helpful</label>
+            <label><input type="radio" name="helpfulness" value="4" > Very helpful</label>
+        </fieldset>
+        
+        <fieldset>
+            <legend><strong>14. Impact on Problem Solving (Learning Impact)<br>How have LLM tools impacted your ability to problem solve?</strong></legend>
+            <label><input type="radio" name="impact_problem_solving" value="3" > It reduced my ability to problem solve</label>
+            <label><input type="radio" name="impact_problem_solving" value="2" > It has not helped me at all</label>
+            <label><input type="radio" name="impact_problem_solving" value="1" > It helps me a little</label>
+            <label><input type="radio" name="impact_problem_solving" value="0" > It helps me a lot</label>
+        </fieldset>
+        
+        <fieldset>
+            <legend><strong>15. Impact on Retention (Learning Impact)<br>Have LLM tools impacted your ability to retain and remember computer science fundamentals?</strong></legend>
+            <label><input type="radio" name="impact_retention" value="0" > I remember more without it</label>
+            <label><input type="radio" name="impact_retention" value="1" > I remember the same amount with or without it</label>
+            <label><input type="radio" name="impact_retention" value="2" > I remember a little less without it</label>
+            <label><input type="radio" name="impact_retention" value="3" > I remember a lot less without it</label>
+        </fieldset>
+        
+        <fieldset>
+            <legend><strong>16. Critical Thinking (Learning Impact)<br>How have LLM tools affected your ability to think critically?</strong></legend>
+            <label><input type="radio" name="critical_thinking" value="0" > I can think critically better without it</label>
+            <label><input type="radio" name="critical_thinking" value="1" > I can think critically with or without it</label>
+            <label><input type="radio" name="critical_thinking" value="2" > I can think a little less critically with it</label>
+            <label><input type="radio" name="critical_thinking" value="3" > I can think a lot less critically with it</label>
+        </fieldset>
+        
+        <fieldset>
+            <legend><strong>17. Partial Assignment Use (Integrity Index)<br>Have you ever turned in an assignment that had partial answers or work from LLM tools?</strong></legend>
+            <label><input type="radio" name="partial_assignment" value="0" > No</label>
+            <label><input type="radio" name="partial_assignment" value="0.5" > Maybe</label>
+            <label><input type="radio" name="partial_assignment" value="1" > Yes</label>
+        </fieldset>
+        
+        <fieldset>
+            <legend><strong>18. Partial Test Use (Integrity Index)<br>Have you ever taken a quiz or test with partial answers from LLM tools?</strong></legend>
+            <label><input type="radio" name="partial_test" value="0" > No</label>
+            <label><input type="radio" name="partial_test" value="0.5" > Maybe</label>
+            <label><input type="radio" name="partial_test" value="1" > Yes</label>
+        </fieldset>
+        
+        <fieldset>
+            <legend><strong>19. Full Assignment Use (Integrity Index)<br>Have you ever turned in an assignment fully generated by LLM tools?</strong></legend>
+            <label><input type="radio" name="full_assignment" value="0" > No</label>
+            <label><input type="radio" name="full_assignment" value="0.5" > Maybe</label>
+            <label><input type="radio" name="full_assignment" value="1" > Yes</label>
+        </fieldset>
+        
+        <fieldset>
+            <legend><strong>20. Full Test Use (Integrity Index)<br>Have you ever taken a quiz or test fully using LLM tools?</strong></legend>
+            <label><input type="radio" name="full_test" value="0" > No</label>
+            <label><input type="radio" name="full_test" value="0.5" > Maybe</label>
+            <label><input type="radio" name="full_test" value="1" > Yes</label>
+        </fieldset>
+        
+        <fieldset>
+            <legend><strong>21. LLM Use for Non-CS Writing (dependency index)<br>How often do you use LLM when writing for non-computer science courses?</strong></legend>
+            <label><input type="radio" name="non_cs_writing" value="0" > Never</label>
+            <label><input type="radio" name="non_cs_writing" value="1" > Almost never</label>
+            <label><input type="radio" name="non_cs_writing" value="2" > Sometimes</label>
+            <label><input type="radio" name="non_cs_writing" value="3" > Often</label>
+            <label><input type="radio" name="non_cs_writing" value="4" > Almost Always</label>
+            <label><input type="radio" name="non_cs_writing" value="5" > Always</label>
+        </fieldset>
+        
+        <fieldset>
+            <legend><strong>22. LLM Use for CS Writing (dependency index & usage index)<br>How often do you use LLM tools when writing for computer science courses?</strong></legend>
+            <label><input type="radio" name="cs_writing" value="0" > Never</label>
+            <label><input type="radio" name="cs_writing" value="1" > Almost never</label>
+            <label><input type="radio" name="cs_writing" value="2" > Sometimes</label>
+            <label><input type="radio" name="cs_writing" value="3" > Often</label>
+            <label><input type="radio" name="cs_writing" value="4" > Almost Always</label>
+            <label><input type="radio" name="cs_writing" value="5" > Always</label>
+        </fieldset>
+        
+        <fieldset>
+            <legend><strong>23. LLM Use for Programming (dependency index)<br>Do you rely on LLM tools for programming?</strong></legend>
+            <label><input type="radio" name="programming" value="0" > I do not need LLM tools at all</label>
+            <label><input type="radio" name="programming" value="1" > LLM tools help me a little</label>
+            <label><input type="radio" name="programming" value="2" > I moderately rely on LLM tools</label>
+            <label><input type="radio" name="programming" value="3" > I heavily rely on LLM tools</label>
+        </fieldset>
+        
+        <fieldset>
+            <legend><strong>24. LLM Use for Theory Questions (dependency index & usage index)<br>How often do you use LLM tools when answering theory questions in computer science courses?</strong></legend>
+            <label><input type="radio" name="theory_questions" value="0" > Never</label>
+            <label><input type="radio" name="theory_questions" value="1" > Almost never</label>
+            <label><input type="radio" name="theory_questions" value="2" > Sometimes</label>
+            <label><input type="radio" name="theory_questions" value="3" > Often</label>
+            <label><input type="radio" name="theory_questions" value="4" > Almost Always</label>
+            <label><input type="radio" name="theory_questions" value="5" > Always</label>
+        </fieldset>
+        
         <button type="button" onclick="submitSurvey()">Submit & See My Personal AI Dependency Score</button>
     </form>
 
@@ -85,6 +222,7 @@
         <p><strong>Learning Impact Score:</strong> <span id="learn-score" class="score"></span></p>
         <p><strong>Integrity / Risk Level:</strong> <span id="risk-score" class="score"></span></p>
         <div id="interpretation" style="margin-top: 20px; font-size: 1.15em; font-weight: 500;"></div>
+        <p style="margin-top: 30px;"><a href="results.html" target="_blank">Compare your score with the overall research findings →</a></p>
     </div>
 
     <script>
@@ -93,13 +231,41 @@
             const formData = new FormData(form);
             let dep = 0, usage = 0, learn = 0, risk = 0;
 
-            // Add your original scoring logic here
-            // Example:
+            dep += parseFloat(formData.get("years_cs") || 0);
             dep += parseFloat(formData.get("dependency") || 0);
-            // ... add all other scoring lines from your original script
+            dep += parseFloat(formData.get("non_cs_writing") || 0);
+            dep += parseFloat(formData.get("cs_writing") || 0);
+            dep += parseFloat(formData.get("programming") || 0);
+            dep += parseFloat(formData.get("theory_questions") || 0);
+
+            usage += parseFloat(formData.get("personal_use") || 0);
+            usage += parseFloat(formData.get("school_use") || 0);
+            usage += parseFloat(formData.get("cs_writing") || 0);
+            usage += parseFloat(formData.get("theory_questions") || 0);
+
+            learn += parseFloat(formData.get("helpfulness") || 0);
+            learn += (4 - parseFloat(formData.get("impact_problem_solving") || 0));
+            learn += (3 - parseFloat(formData.get("impact_retention") || 0));
+            learn += (3 - parseFloat(formData.get("critical_thinking") || 0));
+
+            risk += parseFloat(formData.get("partial_assignment") || 0);
+            risk += parseFloat(formData.get("partial_test") || 0);
+            risk += parseFloat(formData.get("full_assignment") || 0);
+            risk += parseFloat(formData.get("full_test") || 0);
+
+            const interpretation = dep >= 15 ? "High Dependency on AI — similar to heavy users in the case studies." :
+                                  dep >= 9  ? "Moderate Dependency on AI tools." :
+                                  "Low Dependency on AI tools.";
 
             document.getElementById('dep-score').textContent = dep.toFixed(1);
-            document.getElementById('personal-results').style.display = 'block';
+            document.getElementById('usage-score').textContent = usage.toFixed(1);
+            document.getElementById('learn-score').textContent = learn.toFixed(1);
+            document.getElementById('risk-score').textContent = risk.toFixed(1);
+            document.getElementById('interpretation').innerHTML = `<strong>Interpretation:</strong> ${interpretation}`;
+
+            const resultBox = document.getElementById('personal-results');
+            resultBox.style.display = 'block';
+            resultBox.scrollIntoView({ behavior: "smooth" });
         }
     </script>
 </body>

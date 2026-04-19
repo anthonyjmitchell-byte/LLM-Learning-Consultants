@@ -1,222 +1,237 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Results and Analysis - LLM Impact on CS Learning</title>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
-    <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            line-height: 1.7;
-            color: #212529;
-            background-color: #f8f9fa;
-            max-width: 1080px;
-            margin: 0 auto;
-            padding: 30px 20px;
-        }
-        h1, h2, h3 { color: #0d6efd; }
-        .chart-container {
-            background: white;
-            padding: 25px;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            margin: 35px 0;
-        }
-        canvas {
-            max-width: 100% !important;
-            height: 520px !important;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            margin: 25px 0 12px 0;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
-        .insight {
-            background: #e9f5ff;
-            padding: 20px 25px;
-            border-left: 6px solid #0d6efd;
-            border-radius: 6px;
-            margin: 30px 0;
-        }
-        .detailed-analysis {
-            background: #f8f9fa;
-            padding: 25px 30px;
-            border-radius: 8px;
-            margin: 30px 0 40px 0;
-            border: 1px solid #dee2e6;
-        }
-        .methodology {
-            background: #f1f3f5;
-            padding: 25px 30px;
-            border-radius: 8px;
-            margin: 40px 0;
-        }
-        .back-button {
-            background: #198754;
-            color: white;
-            padding: 12px 24px;
-            border-radius: 6px;
-            text-decoration: none;
-            display: inline-block;
-            margin-bottom: 30px;
-        }
-        ul { padding-left: 20px; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Results and Analysis - LLM Impact on CS Learning</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.7;
+      color: #212529;
+      background-color: #f8f9fa;
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 30px 20px;
+    }
+    h1, h2, h3 { color: #0d6efd; }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      margin: 25px 0 12px 0;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .insight {
+      background: #e9f5ff;
+      padding: 20px 25px;
+      border-left: 6px solid #0d6efd;
+      border-radius: 6px;
+      margin: 30px 0;
+    }
+    .detailed-analysis {
+      background: #f8f9fa;
+      padding: 25px 30px;
+      border-radius: 8px;
+      margin: 30px 0 40px 0;
+      border: 1px solid #dee2e6;
+    }
+    .methodology {
+      background: #f1f3f5;
+      padding: 25px 30px;
+      border-radius: 8px;
+      margin: 40px 0;
+    }
+    .back-button {
+      background: #198754;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 6px;
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 30px;
+    }
+    ul { padding-left: 20px; }
+  </style>
 </head>
 <body>
-    <h1>Results & Analysis</h1>
-    <p style="font-size:1.1em; color:#495057;">Investigating the Impact of AI on Undergraduate, Graduate, and Alumni Learning in Computer Science<br>
-    Capstone Project 2026 - Lewis University</p>
+  <h1>Results & Analysis</h1>
+  <p style="font-size:1.1em; color:#495057;">Investigating the Impact of AI on Undergraduate, Graduate, and Alumni Learning in Computer Science
+ Capstone Project 2026 - Lewis University</p>
+  <a href="index.html" class="back-button">← Back to Home</a>
+
+  <h2>Composite Scores Overview</h2>
+  <p>Histograms and boxplots showing the distribution of composite scores across six key dimensions for current Computer Science students.</p>
+  
+  <img src="docs/figures/composite_scores_histograms.png" alt="Histograms of Composite Scores">
+  <p class="figure-caption">Figure 1: Histograms of Composite Scores (Dependency, Learning, Behavior, Benefit, Usage, Risk)</p>
+
+  <div class="detailed-analysis">
+    <h3>Analysis of Histograms </h3>
+    <p>The histograms with kernel density overlays reveal how Computer Science students’ experiences with LLMs vary across six dimensions. Usage and Benefit show strong right-skew toward high values, indicating widespread adoption and perceived productivity gains. In contrast, Perceived Learning Impact peaks at lower scores, highlighting a critical gap: students use LLMs frequently and find them beneficial for immediate tasks, yet they report limited deep learning outcomes. Dependency is bimodal, suggesting two distinct groups — light and heavy users. Risk perception is moderately spread, while Behavioral Change remains mostly low.</p>
+  </div>
+
+  <p><strong>Meaning and Interpretation:</strong> These histograms illustrate the distribution of student responses across the six LLM impact dimensions. Usage and Risk are skewed toward higher values, while Learning peaks at lower scores. This highlights the gap between frequent LLM adoption and perceived deep learning gains.</p>
+
+  <h2>Boxplot Comparison of Composite Scores</h2>
+  
+  <img src="docs/figures/composite_scores_boxplot_improved.png" alt="Boxplot Comparison of Composite Scores">
+  <p class="figure-caption">Figure 2: Boxplot Comparison of Composite Scores</p>
+
+  <div class="detailed-analysis">
+    <h3>Analysis and Interpretation of the Boxplot</h3>
+    <p>This boxplot provides a clear statistical summary of central tendency (median), spread (interquartile range), and outliers for each of the six composite scores. Usage Frequency and Perceived Risks show higher medians, while Perceived Learning Impact has the lowest median and widest variability. This visual strongly confirms the weak translation from heavy LLM usage to genuine deep learning outcomes in Computer Science education.</p>
+  </div>
+
+  <p><strong>Meaning and Interpretation:</strong> The boxplot shows central tendency and spread. Usage and Risk have higher medians, while Learning has the lowest median and widest variability, confirming weak translation from usage to deep learning outcomes.</p>
+
+  <div class="insight">
+    <strong>Findings from Composite Scores:</strong>
+    <ul>
+      <li>High Usage (mean ~2.1/3.0)</li>
+      <li>Moderate Learning Gains (mean ~1.7/3.25)</li>
+      <li>Relatively high Perceived Benefits</li>
+      <li>Moderately high Risk Level</li>
+      <li>Low average Problematic Behavior</li>
+    </ul>
+  </div>
+
+  <h2>Individual Score Distributions</h2>
+
+  <!-- Usage Frequency -->
+  <img src="docs/figures/usage_student_histogram.png" alt="Distribution of Usage Frequency">
+  <p class="figure-caption">Figure 3: Distribution of LLM Usage Scores (Students)</p>
+  <div class="detailed-analysis">
+    <h3>Analysis – Usage Frequency (Mean = 1.97)</h3>
+    <p>The distribution is right-skewed with a clear peak between 1.5 and 2.0, followed by another rise at the highest bin (3.0). The red dashed line marks the mean at 1.97. This indicates strong and frequent adoption of LLMs among Computer Science students for daily academic tasks such as coding, debugging, research, and assignment completion. A significant portion of students uses LLMs at moderate-to-high intensity, confirming that these tools have become a standard part of the modern CS workflow.</p>
+  </div>
+  <p><strong>Meaning:</strong> Strong adoption of LLMs in daily academic tasks.</p>
+
+  <!-- LLM Dependency -->
+  <img src="docs/figures/dependency_student_histogram.png" alt="Distribution of LLM Dependency">
+  <p class="figure-caption">Figure 4: Distribution of LLM Dependency Scores for Students</p>
+  <div class="detailed-analysis">
+    <h3>Analysis – LLM Dependency (Mean = 2.02)</h3>
+    <p>This distribution shows a prominent peak at 2.0 and a secondary rise at 3.0, with the mean at 2.02. The shape suggests moderate-to-high reliance on LLMs for core academic tasks. While some students maintain lower dependency (scores below 1.5), a large group has integrated LLMs deeply into their problem-solving process. This bimodal tendency points to two distinct user types: those who use LLMs occasionally as a supplement and those who treat them as a primary assistance tool.</p>
+  </div>
+  <p><strong>Meaning:</strong> Moderate-to-high reliance on LLMs for core tasks.</p>
+
+  <!-- Perceived Learning Impact -->
+  <img src="docs/figures/learning_student_histogram.png" alt="Distribution of Perceived Learning Impact">
+  <p class="figure-caption">Figure 5: Distribution of Perceived Learning Impact Scores (Students)</p>
+  <div class="detailed-analysis">
+    <h3>Analysis – Perceived Learning Impact (Mean = 1.60)</h3>
+    <p>The distribution is centered around 1.6–1.8 with a mean of 1.60. Although a smaller group reports higher learning gains (around 2.0–2.2), the majority of responses cluster at moderate-to-low scores. This pattern reveals a critical gap: despite high usage and dependency, students perceive only limited improvements in deep conceptual understanding, critical thinking, and long-term retention of Computer Science knowledge. The density curve further emphasizes that true learning gains lag behind adoption rates.</p>
+  </div>
+  <p><strong>Meaning and Interpretation:</strong> Shifted toward lower scores, showing limited perceived gains in conceptual understanding and critical thinking despite high usage.</p>
+
+  <!-- Perceived Benefits -->
+  <img src="docs/figures/benefit_student_histogram.png" alt="Distribution of Perceived Benefits">
+  <p class="figure-caption">Figure 6: Distribution of Perceived Benefit Scores (Students)</p>
+  <div class="detailed-analysis">
+    <h3>Analysis – Perceived Benefits (Mean = 1.12)</h3>
+    <p>This distribution is heavily right-skewed, with the highest bar at the maximum score (~1.4–1.5) and a mean of 1.12. Students overwhelmingly report strong practical benefits from LLM use, particularly in productivity, speed of task completion, and assistance with routine coding/debugging work. However, the shape suggests these benefits are mostly surface-level rather than transformative for deeper learning.</p>
+  </div>
+  <p><strong>Meaning:</strong> Clear productivity benefits, but mostly surface-level.</p>
+
+  <!-- Perceived Risks -->
+  <img src="docs/figures/risk_student_histogram.png" alt="Distribution of Perceived Risks">
+  <p class="figure-caption">Figure 7: Distribution of Perceived Risk Scores (Students)</p>
+  <div class="detailed-analysis">
+    <h3>Analysis – Perceived Risks (Mean = 2.48)</h3>
+    <p>The distribution is roughly bell-shaped with a peak around 2.5–3.0 and a mean of 2.48. A notable portion of students also scores at the higher end (4–5). This indicates reasonable to moderately high awareness of the risks associated with LLM use, including potential skill atrophy, over-dependence, ethical concerns, and accuracy issues. The spread shows varied levels of risk perception across the student population.</p>
+  </div>
+  <p><strong>Meaning:</strong> Reasonable awareness of risks associated with LLM use.</p>
+
+  <!-- Behavioral Change -->
+  <img src="docs/figures/behavior_student_histogram.png" alt="Distribution of Behavioral Change">
+  <p class="figure-caption">Figure 8: Distribution of Problematic Behavior Scores (Students)</p>
+  <div class="detailed-analysis">
+    <h3>Analysis – Behavioral Change (Mean = 0.45)</h3>
+    <p>This distribution is heavily skewed toward low scores, with a mean of only 0.45. Most students report minimal problematic behavioral changes. However, a visible tail extends to higher scores (0.8–1.0), indicating that a small subset of students may be experiencing more concerning shifts, such as reduced independent problem-solving or over-reliance on AI-generated solutions. Overall, extreme negative behaviors remain limited.</p>
+  </div>
+  <p><strong>Meaning:</strong> Generally low problematic behaviors, though some higher scores exist.</p>
+
+  <!-- ====================== STUDENTS VS ALUMNI SECTION (IMPROVED) ====================== -->
+  <h2>Survey Analysis Results: Students vs Alumni</h2>
+  <p>All composite scores in this section are normalized to a 0–1 scale for fair comparison between current undergraduate students and alumni/graduates. Normalization allows direct visual and statistical comparison across groups despite potential differences in how the original scales were constructed.</p>
+
+  <h3>1. Student LLM Impact Profile</h3>
+  <img src="docs/figures/students_radar.png" alt="Student LLM Impact Radar Chart">
+  <p class="figure-caption">Figure 9: Student LLM Impact Profile (Normalized 0–1 Scale)</p>
+  
+  <div class="detailed-analysis">
+    <h4>Anslysis Assessment</h4>
+    <p>The radar chart for current Computer Science students reveals a distinct profile characterized by prominent spikes in <strong>Usage</strong> and <strong>Dependency</strong>. These high scores indicate that today’s undergraduates have deeply integrated Large Language Models into their daily academic routines — from code generation and debugging to idea generation and assignment support.</p>
     
-    <a href="index.html" class="back-button">← Back to Home</a>
-
-    <h2>Composite Scores Overview</h2>
-    <p>Histograms and boxplots showing the distribution of composite scores across six key dimensions for current Computer Science students.</p>
+    <p>In contrast, the <strong>Learning Impact</strong> spoke is noticeably shorter, reflecting limited perceived gains in deep conceptual understanding, critical thinking, and long-term retention of core CS competencies. Moderate scores in Perceived Benefits suggest students clearly value the productivity advantages LLMs provide, while Risk and Behavior remain at low-to-moderate levels, indicating reasonable awareness of potential downsides without widespread problematic behavioral changes.</p>
     
-    <img src="docs/figures/composite_scores_histograms.png" alt="Histograms of Composite Scores">
-    <p class="figure-caption">Figure 1: Histograms of Composite Scores (Dependency, Learning, Behavior, Benefit, Usage, Risk)</p>
+    <p>This pattern fulfills the project’s goal of mapping current integration patterns and underscores a key tension: heavy adoption and short-term productivity gains have not yet translated into stronger deep learning outcomes. The profile highlights the urgent need for pedagogical strategies that encourage more mindful, reflective, and scaffolded use of LLMs rather than passive reliance.</p>
+  </div>
+
+  <p><strong>Meaning and Interpretation:</strong> Current CS students heavily integrate LLMs but see limited gains in deep learning skills. Moderate Benefit and low-to-moderate Risk/Behavior indicate productivity advantages with reasonable caution. This highlights the need for better pedagogical strategies.</p>
+
+  <h3>2. Alumni LLM Impact Profile</h3>
+  <img src="docs/figures/alumni_radar.png" alt="Alumni LLM Impact Radar Chart">
+  <p class="figure-caption">Figure 10: Alumni LLM Impact Profile (Normalized 0–1 Scale)</p>
+  
+  <div class="detailed-analysis">
+    <h4>Anslysis Assessment</h4>
+    <p>The alumni radar chart shows a more balanced but still concerning profile. Compared to current students, alumni report noticeably <strong>lower Dependency</strong> and <strong>Usage Frequency</strong>. This reduction may reflect changes in professional workflows, greater experience with traditional problem-solving methods, or reduced academic pressure after graduation.</p>
     
-    <div class="detailed-analysis">
-        <h3>Analysis of Histograms</h3>
-        <p>The histograms with kernel density overlays reveal how Computer Science students’ experiences with LLMs vary across six dimensions. Usage and Benefit show strong right-skew toward high values, indicating widespread adoption and perceived productivity gains. In contrast, Perceived Learning Impact peaks at lower scores, highlighting a critical gap: students use LLMs frequently and find them beneficial for immediate tasks, yet they report limited deep learning outcomes.</p>
-    </div>
-    <p><strong>Meaning and Interpretation:</strong> These histograms illustrate the distribution of student responses across the six LLM impact dimensions. Usage and Risk are skewed toward higher values, while Learning peaks at lower scores. This highlights the gap between frequent LLM adoption and perceived deep learning gains.</p>
-
-    <h2>Boxplot Comparison of Composite Scores</h2>
-    <img src="docs/figures/composite_scores_boxplot_improved.png" alt="Boxplot Comparison of Composite Scores">
-    <p class="figure-caption">Figure 2: Boxplot Comparison of Composite Scores</p>
+    <p>Importantly, the <strong>Learning Impact</strong> spoke remains short and weak — similar to that of current students. This persistence of low perceived learning gains suggests that the usage–learning gap observed during undergraduate studies does not automatically resolve itself after graduation. Moderate levels of Perceived Benefits, Risk<, and Behavior are largely comparable between the two groups, indicating that the practical advantages and risk awareness of LLMs carry forward into professional life, but deep learning outcomes lag behind.</p>
     
-    <div class="detailed-analysis">
-        <h3>Analysis and Interpretation of the Boxplot</h3>
-        <p>This boxplot provides a clear statistical summary of central tendency, spread, and outliers. Usage Frequency and Perceived Risks show higher medians, while Perceived Learning Impact has the lowest median and widest variability.</p>
-    </div>
-    <p><strong>Meaning and Interpretation:</strong> The boxplot shows central tendency and spread. Usage and Risk have higher medians, while Learning has the lowest median and widest variability, confirming weak translation from usage to deep learning outcomes.</p>
+    <p>These findings imply that heavy LLM reliance during university years may not build stronger long-term foundational skills unless deliberately supported by targeted instructional design. The alumni profile serves as a cautionary signal: without intervention, the current generation of students risks entering the workforce with solid productivity tools but weaker independent problem-solving and conceptual mastery.</p>
+  </div>
 
-    <div class="insight">
-        <strong>Findings from Composite Scores:</strong>
-        <ul>
-            <li>High Usage (mean ~2.1/3.0)</li>
-            <li>Moderate Learning Gains (mean ~1.7/3.25)</li>
-            <li>Relatively high Perceived Benefits</li>
-            <li>Moderately high Risk Level</li>
-            <li>Low average Problematic Behavior</li>
-        </ul>
-    </div>
+  <p><strong>Meaning and Interpretation:</strong> Alumni show lower Dependency and Usage than current students. Learning Impact remains weak, suggesting the usage–learning gap may persist after graduation. Benefit and Risk/Behavior levels are comparable. This indicates that heavy LLM reliance during studies does not automatically result in stronger long-term learning outcomes.</p>
 
-    <h2>Individual Score Distributions</h2>
-    <!-- Your original individual histogram sections remain unchanged -->
-    <img src="docs/figures/usage_student_histogram.png" alt="Distribution of Usage Frequency">
-    <p class="figure-caption">Figure 3: Distribution of LLM Usage Scores (Students)</p>
-    <!-- ... (I kept all your original text for Figures 3–8 as-is) ... -->
+  <h3>3. LLM Impact Comparison: Students vs Alumni</h3>
+  <img src="docs/figures/students_vs_alumni_bar.png" alt="Students vs Alumni Comparison Bar Chart">
+  <p class="figure-caption">Figure 11: LLM Impact Comparison – Students vs Alumni</p>
+  
+  <div class="detailed-analysis">
+    <h4>Anslysis Assessment</h4>
+    <p>The side-by-side bar comparison provides a direct and powerful visualization of differences and similarities between the two groups. Current students score substantially higher on <strong>Usage Frequency</strong> and <strong>LLM Dependency</strong>, confirming more intensive integration of generative AI tools during their studies.</p>
+    
+    <p>Both groups exhibit only modest scores in Perceived Benefits, suggesting that while LLMs are valued for efficiency, their perceived value does not reach transformative levels. Most strikingly, both current students and alumni display very low scores on <strong>Learning Impact</strong> — the shortest bar in the comparison. This consistent weakness across cohorts strongly exposes a systemic gap between rapid LLM adoption and meaningful improvements in core Computer Science competencies such as algorithmic thinking, system design, debugging mindset, and theoretical understanding.</p>
+    
+    <p>The comparable levels of Risk and Behavior further suggest that awareness of potential downsides exists but has not yet led to significant behavioral shifts or stronger learning outcomes. Overall, this comparative analysis robustly supports the capstone’s central thesis: widespread LLM adoption is delivering short-term productivity gains but failing to proportionally enhance deep, durable learning. The persistence of this gap from student years into alumni experience calls for curriculum-level reforms, including explicit LLM literacy training, redesigned assessments that discourage over-reliance, and assignments that require students to explain, critique, and build upon AI-generated outputs.</p>
+  </div>
 
-    <!-- ====================== STUDENTS VS ALUMNI SECTION WITH WORKING CHARTS ====================== -->
-    <h2>Survey Analysis Results: Students vs Alumni</h2>
-    <p>All composite scores in this section are normalized to a 0–1 scale for fair comparison between current undergraduate students and alumni/graduates.</p>
+  <p>Meaning and Interpretation: 
+    Students score higher on Usage and Dependency. Both groups show modest Benefit and strikingly low Learning Impact. This exposes a systemic gap between LLM adoption and improvements in core CS competencies, strongly supporting the capstone’s central thesis.</p>
 
-    <div class="chart-container">
-        <h3>1. Student LLM Impact Profile</h3>
-        <canvas id="studentRadar"></canvas>
-        <p class="figure-caption">Figure 9: Student LLM Impact Profile (Normalized 0–1 Scale)</p>
-    </div>
+  <!-- ====================== METHODOLOGY & DOCUMENTATION ====================== -->
+  <div class="methodology">
+    <h2>Methodology, Assumptions, Limitations, and Documentation</h2>
+   
+    <h3>Modeling Assumptions and Limitations</h3>
+    <p><strong>Key Assumptions:</strong></p>
+    <ul>
+      <li>Survey responses accurately reflect participants’ experiences</li>
+      <li>Composite scoring formulas capture the constructs</li>
+      <li>Normalization to 0–1 scale enables fair comparison without major distortion</li>
+      <li>The Lewis University sample provides useful internal insights</li>
+      <li>LLM usage patterns were relatively stable during data collection</li>
+    </ul>
+    <p><strong>Limitations:</strong></p>
+    <ul>
+      <li>Sample limited to one Lewis University which reduces generalizability</li>
+      <li>Possible response and recall bias - especially for alumni</li>
+    </ul>
+    <p><strong>Model Validation:</strong> 
+      Outputs were checked against the data, distributions checked for anomalies, and all graphs regenerated from the same dataset</p>
+    
+    <ul>
+    </ul>
+  </div>
 
-    <div class="detailed-analysis">
-        <h4>Detailed Interpretation</h4>
-        <p>The radar chart for current Computer Science students reveals a distinct profile characterized by prominent spikes in <strong>Usage</strong> and <strong>Dependency</strong>. These high scores indicate that today’s undergraduates have deeply integrated Large Language Models into their daily academic routines. In contrast, the <strong>Learning Impact</strong> spoke is noticeably shorter, reflecting limited perceived gains in deep conceptual understanding, critical thinking, and long-term retention.</p>
-    </div>
-
-    <div class="chart-container">
-        <h3>2. Alumni LLM Impact Profile</h3>
-        <canvas id="alumniRadar"></canvas>
-        <p class="figure-caption">Figure 10: Alumni LLM Impact Profile (Normalized 0–1 Scale)</p>
-    </div>
-
-    <div class="detailed-analysis">
-        <h4>Detailed Interpretation</h4>
-        <p>The alumni radar chart shows a more balanced but still concerning profile. Alumni report noticeably lower Dependency and Usage Frequency, while the Learning Impact spoke remains short and weak — similar to current students.</p>
-    </div>
-
-    <div class="chart-container">
-        <h3>3. LLM Impact Comparison: Students vs Alumni</h3>
-        <canvas id="comparisonBar"></canvas>
-        <p class="figure-caption">Figure 11: LLM Impact Comparison – Students vs Alumni</p>
-    </div>
-
-    <div class="detailed-analysis">
-        <h4>Detailed Interpretation</h4>
-        <p>Current students score substantially higher on Usage Frequency and LLM Dependency. Both groups display very low scores on Learning Impact. This exposes a systemic gap between rapid LLM adoption and meaningful improvements in core Computer Science competencies, strongly supporting the capstone’s central thesis.</p>
-    </div>
-
-    <!-- Methodology Section -->
-    <div class="methodology">
-        <h2>Methodology, Assumptions, Limitations, and Documentation</h2>
-        <h3>Modeling Assumptions and Limitations</h3>
-        <p><strong>Key Assumptions:</strong></p>
-        <ul>
-            <li>Survey responses accurately reflect participants’ experiences</li>
-            <li>Composite scoring formulas capture the constructs</li>
-            <li>Normalization to 0–1 scale enables fair comparison</li>
-            <li>The Lewis University sample provides useful internal insights</li>
-        </ul>
-        <p><strong>Limitations:</strong></p>
-        <ul>
-            <li>Sample limited to Lewis University which reduces generalizability</li>
-            <li>Possible response and recall bias — especially for alumni</li>
-        </ul>
-    </div>
-
-    <footer style="text-align:center; margin-top:80px; color:#6c757d;">
-        <p>Capstone Project 2026 - Lewis University</p>
-    </footer>
-
-    <script>
-        // Student Radar Chart
-        new Chart(document.getElementById('studentRadar'), {
-            type: 'radar',
-            data: {
-                labels: ['Usage', 'Dependency', 'Learning Impact', 'Benefits', 'Risk', 'Behavior'],
-                datasets: [{
-                    label: 'Current Students',
-                    data: [0.88, 0.85, 0.38, 0.68, 0.52, 0.48],
-                    backgroundColor: 'rgba(13, 110, 253, 0.2)',
-                    borderColor: '#0d6efd',
-                    borderWidth: 3
-                }]
-            },
-            options: { scales: { r: { min: 0, max: 1 } }, responsive: true }
-        });
-
-        // Alumni Radar Chart
-        new Chart(document.getElementById('alumniRadar'), {
-            type: 'radar',
-            data: {
-                labels: ['Usage', 'Dependency', 'Learning Impact', 'Benefits', 'Risk', 'Behavior'],
-                datasets: [{
-                    label: 'Alumni',
-                    data: [0.52, 0.45, 0.35, 0.60, 0.55, 0.50],
-                    backgroundColor: 'rgba(255, 140, 0, 0.2)',
-                    borderColor: '#ff8c00',
-                    borderWidth: 3
-                }]
-            },
-            options: { scales: { r: { min: 0, max: 1 } }, responsive: true }
-        });
-
-        // Comparison Bar Chart
-        new Chart(document.getElementById('comparisonBar'), {
-            type: 'bar',
-            data: {
-                labels: ['Usage', 'Dependency', 'Learning Impact', 'Benefits', 'Risk', 'Behavior'],
-                datasets: [
-                    { label: 'Current Students', data: [0.88, 0.85, 0.38, 0.68, 0.52, 0.48], backgroundColor: '#0d6efd' },
-                    { label: 'Alumni', data: [0.52, 0.45, 0.35, 0.60, 0.55, 0.50], backgroundColor: '#ff8c00' }
-                ]
-            },
-            options: { responsive: true, scales: { y: { min: 0, max: 1 } } }
-        });
-    </script>
+  <footer style="text-align:center; margin-top:80px; color:#6c757d;">
+    <p>Capstone Project 2026 - Lewis University</p>
+  </footer>
 </body>
 </html>
+
+

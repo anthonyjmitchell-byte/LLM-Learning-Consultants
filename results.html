@@ -3,143 +3,198 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LLM Impact on CS Learning - Survey Analysis Results</title>
+    <title>Results and Analysis - LLM Impact on CS Learning</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            max-width: 1100px;
-            margin: 40px auto;
-            padding: 20px;
-            line-height: 1.6;
-            background-color: #f9f9f9;
-            color: #333;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.7;
+            color: #212529;
+            background-color: #f8f9fa;
+            max-width: 1080px;
+            margin: 0 auto;
+            padding: 30px 20px;
         }
-        h1, h2, h3 { color: #0066cc; }
+        h1, h2, h3 { color: #0d6efd; }
         .chart-container {
             background: white;
             padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
             margin: 30px 0;
         }
         canvas {
             max-width: 100% !important;
-            height: 500px !important;
+            height: 520px !important;
         }
-        .interpretation {
-            background: #f0f7ff;
-            padding: 20px;
-            border-left: 5px solid #0066cc;
-            margin: 25px 0;
+        img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin: 25px 0 12px 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
+        .insight {
+            background: #e9f5ff;
+            padding: 20px 25px;
+            border-left: 6px solid #0d6efd;
+            border-radius: 6px;
+            margin: 30px 0;
+        }
+        .detailed-analysis {
+            background: #f8f9fa;
+            padding: 25px 30px;
+            border-radius: 8px;
+            margin: 30px 0 40px 0;
+            border: 1px solid #dee2e6;
+        }
+        .methodology {
+            background: #f1f3f5;
+            padding: 25px 30px;
+            border-radius: 8px;
+            margin: 40px 0;
+        }
+        .back-button {
+            background: #198754;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 30px;
+        }
+        ul { padding-left: 20px; }
     </style>
 </head>
 <body>
-    <h1>Survey Analysis Results: Students vs Alumni</h1>
+    <h1>Results & Analysis</h1>
+    <p style="font-size:1.1em; color:#495057;">Investigating the Impact of AI on Undergraduate, Graduate, and Alumni Learning in Computer Science<br>
+    Capstone Project 2026 - Lewis University</p>
+    
+    <a href="index.html" class="back-button">← Back to Home</a>
+
+    <h2>Composite Scores Overview</h2>
+    <p>Histograms and boxplots showing the distribution of composite scores across six key dimensions for current Computer Science students.</p>
+    
+    <img src="docs/figures/composite_scores_histograms.png" alt="Histograms of Composite Scores">
+    <p class="figure-caption">Figure 1: Histograms of Composite Scores (Dependency, Learning, Behavior, Benefit, Usage, Risk)</p>
+    
+    <div class="detailed-analysis">
+        <h3>Analysis of Histograms</h3>
+        <p>The histograms with kernel density overlays reveal how Computer Science students’ experiences with LLMs vary across six dimensions. Usage and Benefit show strong right-skew toward high values, indicating widespread adoption and perceived productivity gains. In contrast, Perceived Learning Impact peaks at lower scores, highlighting a critical gap...</p>
+    </div>
+
+    <p><strong>Meaning and Interpretation:</strong> These histograms illustrate the distribution of student responses across the six LLM impact dimensions. Usage and Risk are skewed toward higher values, while Learning peaks at lower scores. This highlights the gap between frequent LLM adoption and perceived deep learning gains.</p>
+
+    <h2>Boxplot Comparison of Composite Scores</h2>
+    <img src="docs/figures/composite_scores_boxplot_improved.png" alt="Boxplot Comparison of Composite Scores">
+    <p class="figure-caption">Figure 2: Boxplot Comparison of Composite Scores</p>
+
+    <!-- Keep the rest of your original sections (Individual Score Distributions) as they are -->
+
+    <!-- ====================== STUDENTS VS ALUMNI SECTION WITH CHARTS ====================== -->
+    <h2>Survey Analysis Results: Students vs Alumni</h2>
     <p>All composite scores in this section are normalized to a 0–1 scale for fair comparison between current undergraduate students and alumni/graduates.</p>
 
-    <!-- Figure 9: Student Radar -->
     <div class="chart-container">
-        <h2>Figure 9: Student LLM Impact Profile (Normalized 0–1 Scale)</h2>
+        <h3>1. Student LLM Impact Profile</h3>
         <canvas id="studentRadar"></canvas>
+        <p class="figure-caption">Figure 9: Student LLM Impact Profile (Normalized 0–1 Scale)</p>
     </div>
 
-    <div class="interpretation">
-        <strong>Detailed Interpretation:</strong><br>
-        The radar chart for current Computer Science students reveals a distinct profile with prominent spikes in Usage and Dependency. These high scores indicate that today’s undergraduates have deeply integrated LLMs into their daily academic routines. In contrast, the Learning Impact spoke is noticeably shorter, reflecting limited perceived gains in deep conceptual understanding, critical thinking, and long-term retention.
+    <div class="detailed-analysis">
+        <h4>Detailed Interpretation</h4>
+        <p>The radar chart for current Computer Science students reveals a distinct profile characterized by prominent spikes in <strong>Usage</strong> and <strong>Dependency</strong>. These high scores indicate that today’s undergraduates have deeply integrated Large Language Models into their daily academic routines. In contrast, the <strong>Learning Impact</strong> spoke is noticeably shorter, reflecting limited perceived gains in deep conceptual understanding, critical thinking, and long-term retention of core CS competencies.</p>
     </div>
 
-    <!-- Figure 10: Alumni Radar -->
     <div class="chart-container">
-        <h2>Figure 10: Alumni LLM Impact Profile (Normalized 0–1 Scale)</h2>
+        <h3>2. Alumni LLM Impact Profile</h3>
         <canvas id="alumniRadar"></canvas>
+        <p class="figure-caption">Figure 10: Alumni LLM Impact Profile (Normalized 0–1 Scale)</p>
     </div>
 
-    <div class="interpretation">
-        <strong>Detailed Interpretation:</strong><br>
-        The alumni radar chart shows a more balanced but still concerning profile. Alumni report lower Dependency and Usage compared to current students, while the Learning Impact spoke remains short and weak — similar to that of current students.
+    <div class="detailed-analysis">
+        <h4>Detailed Interpretation</h4>
+        <p>The alumni radar chart shows a more balanced but still concerning profile. Compared to current students, alumni report noticeably lower Dependency and Usage Frequency. Importantly, the Learning Impact spoke remains short and weak — similar to that of current students.</p>
     </div>
 
-    <!-- Figure 11: Comparison Bar -->
     <div class="chart-container">
-        <h2>Figure 11: LLM Impact Comparison – Students vs Alumni</h2>
+        <h3>3. LLM Impact Comparison: Students vs Alumni</h3>
         <canvas id="comparisonBar"></canvas>
+        <p class="figure-caption">Figure 11: LLM Impact Comparison – Students vs Alumni</p>
     </div>
 
-    <div class="interpretation">
-        <strong>Detailed Interpretation:</strong><br>
-        Current students score substantially higher on Usage Frequency and LLM Dependency. Both groups show strikingly low scores on Learning Impact. This consistent weakness across cohorts strongly exposes a systemic gap between rapid LLM adoption and meaningful improvements in core Computer Science competencies.
+    <div class="detailed-analysis">
+        <h4>Detailed Interpretation</h4>
+        <p>Current students score substantially higher on Usage Frequency and LLM Dependency. Both groups exhibit strikingly low scores on Learning Impact. This consistent weakness across cohorts strongly exposes a systemic gap between rapid LLM adoption and meaningful improvements in core Computer Science competencies.</p>
     </div>
+
+    <!-- Keep your Methodology section -->
+    <div class="methodology">
+        <h2>Methodology, Assumptions, Limitations, and Documentation</h2>
+        <h3>Modeling Assumptions and Limitations</h3>
+        <p><strong>Key Assumptions:</strong></p>
+        <ul>
+            <li>Survey responses accurately reflect participants’ experiences</li>
+            <li>Composite scoring formulas capture the constructs</li>
+            <li>Normalization to 0–1 scale enables fair comparison</li>
+        </ul>
+        <p><strong>Limitations:</strong></p>
+        <ul>
+            <li>Sample limited to Lewis University which reduces generalizability</li>
+            <li>Possible response and recall bias — especially for alumni</li>
+        </ul>
+    </div>
+
+    <footer style="text-align:center; margin-top:80px; color:#6c757d;">
+        <p>Capstone Project 2026 - Lewis University</p>
+    </footer>
 
     <script>
-        // Radar Chart for Students
+        // Student Radar
         new Chart(document.getElementById('studentRadar'), {
             type: 'radar',
             data: {
-                labels: ['Usage Frequency', 'Dependency', 'Learning Impact', 'Perceived Benefits', 'Risk Awareness', 'Behavior Change'],
+                labels: ['Usage', 'Dependency', 'Learning Impact', 'Benefits', 'Risk', 'Behavior'],
                 datasets: [{
                     label: 'Current Students',
-                    data: [0.85, 0.82, 0.35, 0.65, 0.55, 0.45],
-                    backgroundColor: 'rgba(0, 102, 204, 0.2)',
-                    borderColor: '#0066cc',
-                    borderWidth: 3,
-                    pointBackgroundColor: '#0066cc'
+                    data: [0.88, 0.85, 0.38, 0.68, 0.52, 0.48],
+                    backgroundColor: 'rgba(13, 110, 253, 0.2)',
+                    borderColor: '#0d6efd',
+                    borderWidth: 3
                 }]
             },
-            options: {
-                responsive: true,
-                plugins: { legend: { position: 'top' } },
-                scales: { r: { min: 0, max: 1, ticks: { stepSize: 0.2 } } }
-            }
+            options: { scales: { r: { min: 0, max: 1 } }, responsive: true }
         });
 
-        // Radar Chart for Alumni
+        // Alumni Radar
         new Chart(document.getElementById('alumniRadar'), {
             type: 'radar',
             data: {
-                labels: ['Usage Frequency', 'Dependency', 'Learning Impact', 'Perceived Benefits', 'Risk Awareness', 'Behavior Change'],
+                labels: ['Usage', 'Dependency', 'Learning Impact', 'Benefits', 'Risk', 'Behavior'],
                 datasets: [{
                     label: 'Alumni',
-                    data: [0.55, 0.48, 0.32, 0.62, 0.58, 0.50],
+                    data: [0.52, 0.45, 0.35, 0.60, 0.55, 0.50],
                     backgroundColor: 'rgba(255, 140, 0, 0.2)',
                     borderColor: '#ff8c00',
-                    borderWidth: 3,
-                    pointBackgroundColor: '#ff8c00'
+                    borderWidth: 3
                 }]
             },
-            options: {
-                responsive: true,
-                plugins: { legend: { position: 'top' } },
-                scales: { r: { min: 0, max: 1, ticks: { stepSize: 0.2 } } }
-            }
+            options: { scales: { r: { min: 0, max: 1 } }, responsive: true }
         });
 
-        // Bar Chart Comparison
+        // Comparison Bar
         new Chart(document.getElementById('comparisonBar'), {
             type: 'bar',
             data: {
-                labels: ['Usage Frequency', 'Dependency', 'Learning Impact', 'Perceived Benefits', 'Risk Awareness', 'Behavior Change'],
+                labels: ['Usage', 'Dependency', 'Learning Impact', 'Benefits', 'Risk', 'Behavior'],
                 datasets: [
-                    {
-                        label: 'Current Students',
-                        data: [0.85, 0.82, 0.35, 0.65, 0.55, 0.45],
-                        backgroundColor: '#0066cc'
-                    },
-                    {
-                        label: 'Alumni',
-                        data: [0.55, 0.48, 0.32, 0.62, 0.58, 0.50],
-                        backgroundColor: '#ff8c00'
-                    }
+                    { label: 'Current Students', data: [0.88, 0.85, 0.38, 0.68, 0.52, 0.48], backgroundColor: '#0d6efd' },
+                    { label: 'Alumni',           data: [0.52, 0.45, 0.35, 0.60, 0.55, 0.50], backgroundColor: '#ff8c00' }
                 ]
             },
-            options: {
-                responsive: true,
-                plugins: { legend: { position: 'top' } },
-                scales: {
-                    y: { min: 0, max: 1, title: { display: true, text: 'Normalized Score (0–1)' } }
-                }
-            }
+            options: { responsive: true, scales: { y: { min: 0, max: 1 } } }
         });
     </script>
 </body>

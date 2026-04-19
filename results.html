@@ -55,7 +55,7 @@
     }
     ul { padding-left: 20px; }
 
-    /* Chart container styles */
+    /* Chart styles */
     .chart-container {
       background: white;
       padding: 25px;
@@ -107,7 +107,6 @@
   </div>
 
   <h2>Individual Score Distributions</h2>
-  <!-- Usage Frequency -->
   <img src="docs/figures/usage_student_histogram.png" alt="Distribution of Usage Frequency">
   <p class="figure-caption">Figure 3: Distribution of LLM Usage Scores (Students)</p>
   <div class="detailed-analysis">
@@ -116,7 +115,6 @@
   </div>
   <p><strong>Meaning:</strong> Strong adoption of LLMs in daily academic tasks.</p>
 
-  <!-- LLM Dependency -->
   <img src="docs/figures/dependency_student_histogram.png" alt="Distribution of LLM Dependency">
   <p class="figure-caption">Figure 4: Distribution of LLM Dependency Scores for Students</p>
   <div class="detailed-analysis">
@@ -125,7 +123,6 @@
   </div>
   <p><strong>Meaning:</strong> Moderate-to-high reliance on LLMs for core tasks.</p>
 
-  <!-- Perceived Learning Impact -->
   <img src="docs/figures/learning_student_histogram.png" alt="Distribution of Perceived Learning Impact">
   <p class="figure-caption">Figure 5: Distribution of Perceived Learning Impact Scores (Students)</p>
   <div class="detailed-analysis">
@@ -134,7 +131,6 @@
   </div>
   <p><strong>Meaning and Interpretation:</strong> Shifted toward lower scores, showing limited perceived gains in conceptual understanding and critical thinking despite high usage.</p>
 
-  <!-- Perceived Benefits -->
   <img src="docs/figures/benefit_student_histogram.png" alt="Distribution of Perceived Benefits">
   <p class="figure-caption">Figure 6: Distribution of Perceived Benefit Scores (Students)</p>
   <div class="detailed-analysis">
@@ -143,7 +139,6 @@
   </div>
   <p><strong>Meaning:</strong> Clear productivity benefits, but mostly surface-level.</p>
 
-  <!-- Perceived Risks -->
   <img src="docs/figures/risk_student_histogram.png" alt="Distribution of Perceived Risks">
   <p class="figure-caption">Figure 7: Distribution of Perceived Risk Scores (Students)</p>
   <div class="detailed-analysis">
@@ -152,7 +147,6 @@
   </div>
   <p><strong>Meaning:</strong> Reasonable awareness of risks associated with LLM use.</p>
 
-  <!-- Behavioral Change -->
   <img src="docs/figures/behavior_student_histogram.png" alt="Distribution of Behavioral Change">
   <p class="figure-caption">Figure 8: Distribution of Problematic Behavior Scores (Students)</p>
   <div class="detailed-analysis">
@@ -165,7 +159,7 @@
   <h2>Survey Analysis Results: Students vs Alumni</h2>
   <p>All composite scores in this section are normalized to a 0–1 scale for fair comparison between current undergraduate students and alumni/graduates. Normalization allows direct visual and statistical comparison across groups despite potential differences in how the original scales were constructed.</p>
 
-  <!-- Figure 9 -->
+  <!-- Figure 9: Student Radar (Blue) -->
   <div class="chart-container">
     <h3>1. Student LLM Impact Profile</h3>
     <canvas id="studentRadar"></canvas>
@@ -179,7 +173,7 @@
   </div>
   <p><strong>Meaning and Interpretation:</strong> Current CS students heavily integrate LLMs but see limited gains in deep learning skills. Moderate Benefit and low-to-moderate Risk/Behavior indicate productivity advantages with reasonable caution. This highlights the need for better pedagogical strategies.</p>
 
-  <!-- Figure 10 -->
+  <!-- Figure 10: Alumni Radar (Grey) -->
   <div class="chart-container">
     <h3>2. Alumni LLM Impact Profile</h3>
     <canvas id="alumniRadar"></canvas>
@@ -193,7 +187,7 @@
   </div>
   <p><strong>Meaning and Interpretation:</strong> Alumni show lower Dependency and Usage than current students. Learning Impact remains weak, suggesting the usage–learning gap may persist after graduation. Benefit and Risk/Behavior levels are comparable. This indicates that heavy LLM reliance during studies does not automatically result in stronger long-term learning outcomes.</p>
 
-  <!-- Figure 11 -->
+  <!-- Figure 11: Comparison Bar (Blue vs Grey) -->
   <div class="chart-container">
     <h3>3. LLM Impact Comparison: Students vs Alumni</h3>
     <canvas id="comparisonBar"></canvas>
@@ -233,7 +227,7 @@
 
   <!-- Chart.js Scripts -->
   <script>
-    // Figure 9: Student Radar
+    // Figure 9: Student Radar - Blue
     new Chart(document.getElementById('studentRadar'), {
       type: 'radar',
       data: {
@@ -241,15 +235,16 @@
         datasets: [{
           label: 'Current Students',
           data: [0.88, 0.85, 0.38, 0.68, 0.52, 0.48],
-          backgroundColor: 'rgba(13, 110, 253, 0.2)',
+          backgroundColor: 'rgba(13, 110, 253, 0.25)',
           borderColor: '#0d6efd',
-          borderWidth: 3
+          borderWidth: 3,
+          pointBackgroundColor: '#0d6efd'
         }]
       },
       options: { scales: { r: { min: 0, max: 1 } }, responsive: true }
     });
 
-    // Figure 10: Alumni Radar
+    // Figure 10: Alumni Radar - Grey
     new Chart(document.getElementById('alumniRadar'), {
       type: 'radar',
       data: {
@@ -257,22 +252,31 @@
         datasets: [{
           label: 'Alumni',
           data: [0.52, 0.45, 0.35, 0.60, 0.55, 0.50],
-          backgroundColor: 'rgba(255, 140, 0, 0.2)',
-          borderColor: '#ff8c00',
-          borderWidth: 3
+          backgroundColor: 'rgba(128, 128, 128, 0.25)',
+          borderColor: '#808080',
+          borderWidth: 3,
+          pointBackgroundColor: '#808080'
         }]
       },
       options: { scales: { r: { min: 0, max: 1 } }, responsive: true }
     });
 
-    // Figure 11: Students vs Alumni Bar
+    // Figure 11: Students vs Alumni Bar - Blue vs Grey
     new Chart(document.getElementById('comparisonBar'), {
       type: 'bar',
       data: {
         labels: ['Usage', 'Dependency', 'Learning Impact', 'Benefits', 'Risk', 'Behavior'],
         datasets: [
-          { label: 'Current Students', data: [0.88, 0.85, 0.38, 0.68, 0.52, 0.48], backgroundColor: '#0d6efd' },
-          { label: 'Alumni', data: [0.52, 0.45, 0.35, 0.60, 0.55, 0.50], backgroundColor: '#ff8c00' }
+          { 
+            label: 'Current Students', 
+            data: [0.88, 0.85, 0.38, 0.68, 0.52, 0.48], 
+            backgroundColor: '#0d6efd' 
+          },
+          { 
+            label: 'Alumni', 
+            data: [0.52, 0.45, 0.35, 0.60, 0.55, 0.50], 
+            backgroundColor: '#808080' 
+          }
         ]
       },
       options: { responsive: true, scales: { y: { min: 0, max: 1 } } }
